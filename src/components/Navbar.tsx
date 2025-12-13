@@ -18,7 +18,7 @@ export default function Navbar() {
                 </motion.div>
 
                 <nav className="flex gap-6">
-                    {['Projets', 'Contact'].map((item, index) => (
+                    {['Compétences', 'Contact'].map((item, index) => (
                         <motion.div
                             key={item}
                             initial={{ opacity: 0, y: -10 }}
@@ -26,7 +26,7 @@ export default function Navbar() {
                             transition={{ delay: 0.1 * index, duration: 0.5 }}
                         >
                             <Link
-                                href={`#${item.toLowerCase()}`}
+                                href={`#${item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`}
                                 className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
                             >
                                 {item}
