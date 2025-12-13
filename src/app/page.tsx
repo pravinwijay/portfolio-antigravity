@@ -5,6 +5,8 @@ import Footer from '@/components/Footer';
 import dbConnect from '@/lib/db';
 import Project from '@/models/Project';
 
+import BackgroundDecor from '@/components/BackgroundDecor';
+
 // Force dynamic rendering to ensure fresh data if needed, or stick to static if preferred.
 // For a portfolio, static with revalidation is good, but for simplicity let's do dynamic for now to reflect DB changes.
 export const dynamic = 'force-dynamic';
@@ -25,10 +27,11 @@ export default async function Home() {
   const projects = await getProjects();
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col relative">
+      <BackgroundDecor />
       <Navbar />
 
-      <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <main className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 relative">
         <Hero />
 
         <section id="projects" className="py-20">
