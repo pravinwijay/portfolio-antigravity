@@ -20,7 +20,7 @@ export default function Navbar() {
                 </motion.div>
 
                 <div className="flex items-center gap-6">
-                    <nav className="flex gap-6">
+                    <nav className="hidden md:flex gap-6">
                         {['Compétences', 'Contact'].map((item, index) => (
                             <motion.div
                                 key={item}
@@ -37,6 +37,7 @@ export default function Navbar() {
                             </motion.div>
                         ))}
                     </nav>
+                    <div className="h-6 w-px bg-gray-200 dark:bg-white/10 mx-2 hidden md:block"></div>
                     <ModeToggle />
                 </div>
             </div>
