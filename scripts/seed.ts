@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import * as dotenv from 'dotenv';
 import Skill from '../src/models/Skill';
-import Project from '../src/models/Project';
+
 
 dotenv.config({ path: '.env.local' });
 
@@ -13,20 +13,20 @@ if (!MONGODB_URI) {
 
 const sampleSkills = [
     // Frontend
-    { name: 'React / Next.js', category: 'Frontend', level: 95 },
-    { name: 'TypeScript', category: 'Frontend', level: 90 },
-    { name: 'Tailwind CSS', category: 'Frontend', level: 95 },
-    { name: 'Framer Motion', category: 'Frontend', level: 85 },
+    { name: 'React / Next.js', category: 'Frontend', level: 95, learnedAt: 'Autodidacte' },
+    { name: 'TypeScript', category: 'Frontend', level: 90, learnedAt: 'Projet Professionnel' },
+    { name: 'Tailwind CSS', category: 'Frontend', level: 95, learnedAt: 'Autodidacte' },
+    { name: 'Framer Motion', category: 'Frontend', level: 85, learnedAt: 'Projet Personnel' },
 
     // Backend
-    { name: 'Node.js', category: 'Backend', level: 80 },
-    { name: 'MongoDB', category: 'Backend', level: 85 },
-    { name: 'Python', category: 'Backend', level: 75 },
+    { name: 'Node.js', category: 'Backend', level: 80, learnedAt: 'Formation en Ligne' },
+    { name: 'MongoDB', category: 'Backend', level: 85, learnedAt: 'Projet Professionnel' },
+    { name: 'Python', category: 'Backend', level: 75, learnedAt: 'Université' },
 
     // Tools
-    { name: 'Git / GitHub', category: 'Outils', level: 90 },
-    { name: 'Docker', category: 'Outils', level: 70 },
-    { name: 'Figma', category: 'Design', level: 60 }
+    { name: 'Git / GitHub', category: 'Outils', level: 90, learnedAt: 'Quotidien' },
+    { name: 'Docker', category: 'Outils', level: 70, learnedAt: 'Formation' },
+    { name: 'Figma', category: 'Design', level: 60, learnedAt: 'Autodidacte' }
 ];
 
 async function seed() {
@@ -38,8 +38,7 @@ async function seed() {
         // Let's drop everything to be clean.
         console.log('Suppression des anciennes données...');
 
-        // We try to drop both if they exist
-        try { await Project.collection.drop(); } catch (e) { /* ignore */ }
+        // We try to drop if it exists
         try { await Skill.collection.drop(); } catch (e) { /* ignore */ }
 
         console.log('Ajout des compétences...');

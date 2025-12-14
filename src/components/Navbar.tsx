@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
+import { ModeToggle } from './ThemeToggle';
+
 export default function Navbar() {
     return (
         <header className="fixed top-0 inset-x-0 h-16 z-50 bg-white/10 dark:bg-black/10 backdrop-blur-md border-b border-white/10 dark:border-white/5">
@@ -17,23 +19,26 @@ export default function Navbar() {
                     </Link>
                 </motion.div>
 
-                <nav className="flex gap-6">
-                    {['Compétences', 'Contact'].map((item, index) => (
-                        <motion.div
-                            key={item}
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.1 * index, duration: 0.5 }}
-                        >
-                            <Link
-                                href={`#${item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`}
-                                className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                <div className="flex items-center gap-6">
+                    <nav className="flex gap-6">
+                        {['Compétences', 'Contact'].map((item, index) => (
+                            <motion.div
+                                key={item}
+                                initial={{ opacity: 0, y: -10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.1 * index, duration: 0.5 }}
                             >
-                                {item}
-                            </Link>
-                        </motion.div>
-                    ))}
-                </nav>
+                                <Link
+                                    href={`#${item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`}
+                                    className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                                >
+                                    {item}
+                                </Link>
+                            </motion.div>
+                        ))}
+                    </nav>
+                    <ModeToggle />
+                </div>
             </div>
         </header>
     );
