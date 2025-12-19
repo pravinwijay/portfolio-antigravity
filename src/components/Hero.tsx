@@ -1,53 +1,46 @@
-'use client';
+'use client'
 
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
+import { useLanguage } from '../context/LanguageContext'
 
-export default function Hero() {
+export function Hero() {
+    const { t } = useLanguage()
+
     return (
-        <section className="min-h-[80vh] flex flex-col justify-center items-start pt-20">
+        <section className="h-[70vh] flex flex-col justify-center px-6 lg:px-24 pt-32 pb-20 relative z-10">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="space-y-6 max-w-4xl"
             >
-                <h2 className="text-lg md:text-xl font-medium text-purple-600 dark:text-purple-400 mb-4">
-                    Bonjour, je suis Développeur
-                </h2>
-            </motion.div>
+                <h1 className="text-5xl md:text-8xl font-bold tracking-tight text-zinc-900 dark:text-white/90 transition-colors">
+                    {t('hero.title1')} <br className="hidden md:block" /> {t('hero.title2')}
+                </h1>
+                <p className="text-xl md:text-2xl text-zinc-600 dark:text-white/60 max-w-2xl leading-relaxed transition-colors">
+                    {t('hero.subtitle')}
+                </p>
 
-            <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1, duration: 0.5 }}
-                className="text-5xl md:text-7xl font-bold tracking-tight mb-6 max-w-4xl"
-            >
-                Je conçois des produits,<br className="hidden md:block" />
-                <span className="bg-gradient-to-r from-purple-600 via-blue-500 to-cyan-400 bg-clip-text text-transparent">
-                    digitaux et des expériences.
-                </span>
-            </motion.h1>
-
-            <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-                className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mb-10"
-            >
-                Je me spécialise dans la création d'expériences numériques exceptionnelles. Actuellement, je me concentre sur la construction de produits accessibles et centrés sur l'humain.
-            </motion.p>
-
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-            >
-                <a
-                    href="#projects"
-                    className="px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-full hover:scale-105 transition-transform"
-                >
-                    Voir mes travaux
-                </a>
+                <div className="flex gap-4 pt-4">
+                    <motion.a
+                        href="https://github.com/pravinwijay"
+                        target="_blank"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-6 py-3 bg-zinc-900 dark:bg-white text-white dark:text-black rounded-lg font-medium text-lg hover:bg-zinc-800 dark:hover:bg-white/90 transition-colors"
+                    >
+                        {t('hero.ctaGithub')}
+                    </motion.a>
+                    <motion.a
+                        href="mailto:contact@pravin.dev"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-6 py-3 border border-zinc-200 dark:border-white/20 rounded-lg font-medium text-lg text-zinc-900 dark:text-white hover:bg-zinc-100 dark:hover:bg-white/10 transition-colors"
+                    >
+                        {t('hero.ctaContact')}
+                    </motion.a>
+                </div>
             </motion.div>
         </section>
-    );
+    )
 }
