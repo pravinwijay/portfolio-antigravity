@@ -5,22 +5,25 @@ import Image from 'next/image'
 
 const projects = [
     {
-        title: "Tableau de Bord E-Commerce",
-        description: "Un tableau de bord complet pour gérer les métriques de vente.",
-        tags: ["Next.js", "Tremor", "Postgres"],
-        links: { demo: "#", repo: "#" }
+        title: "pw-cakes react",
+        description: "Application e-commerce moderne pour une pâtisserie, créé avec React.",
+        tags: ["React", "Vite", "Tailwind"],
+        links: { demo: "#", repo: "https://github.com/pravinwijay/pwcakes-react" },
+        image: "/images/projects/pw-cakes.png"
     },
     {
-        title: "Interface Chat IA",
-        description: "Interface d'IA générative avec réponses en streaming.",
-        tags: ["React", "OpenAI", "Tailwind"],
-        links: { demo: "#", repo: "#" }
+        title: "my-spotify",
+        description: "Un clone de l'interface Spotify pour explorer les fonctionnalités de Next.js.",
+        tags: ["Next.js", "TypeScript", "Tailwind"],
+        links: { demo: "#", repo: "https://github.com/pravinwijay/spotify" },
+        image: "/images/projects/spotify-clone.png"
     },
     {
-        title: "Suivi Financier",
-        description: "App de finance personnelle avec visualisation de données.",
-        tags: ["Vue", "D3.js", "Firebase"],
-        links: { demo: "#", repo: "#" }
+        title: "pokemon jee",
+        description: "Projet de gestion de collection Pokémon utilisant les technologies Java EE.",
+        tags: ["Java", "JEE", "MySQL"],
+        links: { demo: "#", repo: "https://github.com/pravinwijay/pokemon-jee" },
+        image: "/images/projects/pokemon-jee.png"
     }
 ]
 
@@ -44,10 +47,12 @@ export function ProjectShowcase() {
                         className="group bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-white/5 rounded-2xl overflow-hidden hover:border-zinc-300 dark:hover:border-white/10 transition-colors shadow-sm dark:shadow-none"
                     >
                         <div className="h-48 bg-zinc-200 dark:bg-zinc-800 relative overflow-hidden">
-                            {/* Placeholder for project image */}
-                            <div className="absolute inset-0 flex items-center justify-center text-zinc-500 dark:text-zinc-600 text-sm">
-                                Aperçu Projet
-                            </div>
+                            <Image
+                                src={project.image}
+                                alt={project.title}
+                                fill
+                                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                            />
                             <div className="absolute inset-0 bg-black/5 dark:bg-black/20 group-hover:bg-transparent transition-colors" />
                         </div>
 
