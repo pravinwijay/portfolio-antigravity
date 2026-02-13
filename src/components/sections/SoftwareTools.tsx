@@ -1,17 +1,11 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { SiDassaultsystemes, SiFigma, SiBlender, SiCanva, SiDavinciresolve } from 'react-icons/si'
-// Using Adobe Premiere icon as proxy for DaVinci Resolve if specific not available
-import { useLanguage } from '../context/LanguageContext'
+import Image from 'next/image'
 
-const tools = [
-    { name: "SolidWorks", icon: SiDassaultsystemes, color: "hover:text-red-500" },
-    { name: "Figma", icon: SiFigma, color: "hover:text-purple-500" },
-    { name: "Blender", icon: SiBlender, color: "hover:text-orange-500" },
-    { name: "DaVinci Resolve", icon: SiDavinciresolve, color: "hover:text-blue-500" }, // Proxy
-    { name: "Canva", icon: SiCanva, color: "hover:text-cyan-500" },
-]
+import { motion } from 'framer-motion'
+// Using Adobe Premiere icon as proxy for DaVinci Resolve if specific not available
+import { useLanguage } from '../../context/LanguageContext'
+import { TOOLS } from '../../constants/tools'
 
 export function SoftwareTools() {
     const { t } = useLanguage()
@@ -21,7 +15,8 @@ export function SoftwareTools() {
             <h2 className="text-3xl font-bold text-zinc-900 dark:text-white mb-12">{t('tools.title')}</h2>
 
             <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 max-w-5xl mx-auto">
-                {tools.map((tool, i) => (
+
+                {TOOLS.map((tool, i) => (
                     <motion.div
                         key={tool.name}
                         initial={{ opacity: 0, scale: 0.5 }}
@@ -30,7 +25,18 @@ export function SoftwareTools() {
                         transition={{ delay: i * 0.1 }}
                         className={`flex flex-col items-center gap-4 group cursor-pointer`}
                     >
-                        <tool.icon className={`text-6xl text-zinc-400 dark:text-zinc-600 transition-colors duration-300 ${tool.color}`} />
+                        {typeof tool.icon === 'string' ? (
+                            <div className="relative w-16 h-16 grayscale group-hover:grayscale-0 transition-all duration-300">
+                                <Image
+                                    src={tool.icon}
+                                    alt={tool.name}
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+                        ) : (
+                            <tool.icon className={`text-6xl text-zinc-400 dark:text-zinc-600 transition-colors duration-300 ${tool.color}`} />
+                        )}
                         <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-zinc-200 transition-colors">
                             {tool.name}
                         </span>

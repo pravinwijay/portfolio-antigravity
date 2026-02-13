@@ -2,32 +2,9 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { PROJECTS } from '../../constants/projects'
 
-const projects = [
-    {
-        title: "pw-cakes react",
-        description: "Application e-commerce moderne pour une pâtisserie, créé avec React.",
-        tags: ["React", "Vite", "Tailwind"],
-        links: { demo: "#", repo: "https://github.com/pravinwijay/pwcakes-react" },
-        image: "/images/projects/pw-cakes.png"
-    },
-    {
-        title: "my-spotify",
-        description: "Un clone de l'interface Spotify pour explorer les fonctionnalités de Next.js.",
-        tags: ["Next.js", "TypeScript", "Tailwind"],
-        links: { demo: "#", repo: "https://github.com/pravinwijay/spotify" },
-        image: "/images/projects/spotify-clone.png"
-    },
-    {
-        title: "pokemon jee",
-        description: "Projet de gestion de collection Pokémon utilisant les technologies Java EE.",
-        tags: ["Java", "JEE", "MySQL"],
-        links: { demo: "#", repo: "https://github.com/pravinwijay/pokemon-jee" },
-        image: "/images/projects/pokemon-jee.png"
-    }
-]
-
-import { useLanguage } from '../context/LanguageContext'
+import { useLanguage } from '../../context/LanguageContext'
 
 export function ProjectShowcase() {
     const { t } = useLanguage()
@@ -37,7 +14,7 @@ export function ProjectShowcase() {
             <h2 className="text-3xl font-bold text-zinc-900 dark:text-white mb-12">{t('projects.title')}</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {projects.map((project, i) => (
+                {PROJECTS.map((project, i) => (
                     <motion.div
                         key={i}
                         initial={{ opacity: 0, y: 20 }}

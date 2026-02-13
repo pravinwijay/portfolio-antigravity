@@ -1,14 +1,14 @@
 'use client'
 
-import { Hero } from '../components/Hero'
-import { BentoGrid } from '../components/BentoGrid'
-import { ProjectShowcase } from '../components/ProjectShowcase'
-import { SoftwareTools } from '../components/SoftwareTools'
-import { Experience } from '../components/Experience'
-import { ModeToggle } from '../components/ThemeToggle'
-import { CharacterAvatar } from '../components/CharacterAvatar'
+import { Hero } from '../components/sections/Hero'
+import { BentoGrid } from '../components/ui/BentoGrid'
+import { ProjectShowcase } from '../components/sections/ProjectShowcase'
+import { SoftwareTools } from '../components/sections/SoftwareTools'
+import { Experience } from '../components/sections/Experience'
+import { ModeToggle } from '../components/layout/ThemeToggle'
+import { CharacterAvatar } from '../components/ui/CharacterAvatar'
 
-import { LanguageToggle } from '../components/LanguageToggle'
+import { LanguageToggle } from '../components/layout/LanguageToggle'
 import { useLanguage } from '../context/LanguageContext'
 
 // Separate Footer component to use hook

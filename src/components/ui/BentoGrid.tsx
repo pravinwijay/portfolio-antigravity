@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { Briefcase, GraduationCap, Building2, Landmark } from 'lucide-react'
 import { SiCarrefour } from 'react-icons/si'
-import { useLanguage } from '../context/LanguageContext'
+import { useLanguage } from '../../context/LanguageContext'
 
 const container = {
     hidden: { opacity: 0 },
@@ -78,6 +78,15 @@ export function BentoGrid() {
             date: "01/2024 - 03/2024",
             details: t('about.eduDetails2'),
             stack: "React.JS, Vue.js, Symfony, Spring Boot, iOS Swift, Docker, Stack ELK, OWASP Secure Coding, Figma, UML",
+            icon: GraduationCap,
+            color: "bg-zinc-900 dark:bg-white"
+        },
+        {
+            title: "BTS Services Informatiques aux Organisations",
+            school: "Lycée Jean Rostand Chantilly",
+            date: "2021 - 2023",
+            details: "Option SLAM (Solutions Logicielles et Applications Métiers)",
+            stack: "Java, PHP, SQL, HTML/CSS, JavaScript, Git",
             icon: GraduationCap,
             color: "bg-zinc-900 dark:bg-white"
         }
