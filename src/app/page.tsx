@@ -2,7 +2,7 @@
 
 import { Hero } from '../components/sections/Hero'
 import { BentoGrid } from '../components/ui/BentoGrid'
-import { ProjectShowcase } from '../components/sections/ProjectShowcase'
+import { FeatureShowcase } from '../components/sections/FeatureShowcase'
 import { SoftwareTools } from '../components/sections/SoftwareTools'
 import { Experience } from '../components/sections/Experience'
 import { ModeToggle } from '../components/layout/ThemeToggle'
@@ -33,7 +33,7 @@ export default function Home() {
       ></div>
       <Hero />
       <BentoGrid />
-      <ProjectShowcase />
+      <FeatureShowcase />
       <SoftwareTools />
 
       <Footer />

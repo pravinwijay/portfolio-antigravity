@@ -20,6 +20,22 @@ const item = {
     show: { opacity: 1, y: 0 }
 }
 
+const listContainer = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1,
+            delayChildren: 0.2
+        }
+    }
+}
+
+const listItem = {
+    hidden: { opacity: 0, x: -10 },
+    show: { opacity: 1, x: 0 }
+}
+
 export function BentoGrid() {
     const { t } = useLanguage();
 
@@ -157,9 +173,15 @@ export function BentoGrid() {
                         <Briefcase className="w-6 h-6 text-zinc-500" />
                         {t('about.experienceTitle')}
                     </h3>
-                    <div className="space-y-8 border-l-2 border-zinc-200 dark:border-zinc-800 ml-3 pl-8 relative">
+                    <motion.div
+                        variants={listContainer}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true }}
+                        className="space-y-8 border-l-2 border-zinc-200 dark:border-zinc-800 ml-3 pl-8 relative"
+                    >
                         {experiences.map((exp, i) => (
-                            <div key={i} className="relative">
+                            <motion.div variants={listItem} key={i} className="relative">
                                 <span className={`absolute -left-[41px] top-1 p-2 rounded-full border-4 border-white dark:border-black ${exp.color} text-white`}>
                                     <exp.icon className="w-4 h-4" />
                                 </span>
@@ -170,9 +192,9 @@ export function BentoGrid() {
                                 <span className="inline-block px-2 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 text-xs rounded mb-2">
                                     {exp.date}
                                 </span>
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </motion.div>
 
                 {/* Education Block */}
@@ -181,9 +203,15 @@ export function BentoGrid() {
                         <GraduationCap className="w-6 h-6 text-zinc-500" />
                         {t('about.educationTitle')}
                     </h3>
-                    <div className="space-y-8 border-l-2 border-zinc-200 dark:border-zinc-800 ml-3 pl-8 relative">
+                    <motion.div
+                        variants={listContainer}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true }}
+                        className="space-y-8 border-l-2 border-zinc-200 dark:border-zinc-800 ml-3 pl-8 relative"
+                    >
                         {education.map((edu, i) => (
-                            <div key={i} className="relative">
+                            <motion.div variants={listItem} key={i} className="relative">
                                 <span className={`absolute -left-[41px] top-1 p-2 rounded-full border-4 border-white dark:border-black bg-zinc-900 dark:bg-white text-white dark:text-black`}>
                                     <edu.icon className="w-4 h-4" />
                                 </span>
@@ -194,9 +222,9 @@ export function BentoGrid() {
                                 <span className="inline-block px-2 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 text-xs rounded mb-2">
                                     {edu.date}
                                 </span>
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </motion.div>
 
             </motion.div>
