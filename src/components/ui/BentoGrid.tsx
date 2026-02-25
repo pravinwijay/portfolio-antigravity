@@ -120,7 +120,7 @@ export function BentoGrid() {
             >
 
                 {/* About Block - Large */}
-                <motion.div variants={item} className="md:col-span-2 md:row-span-2 bg-white dark:bg-zinc-900 rounded-3xl p-8 border border-zinc-200 dark:border-white/5 relative overflow-hidden group shadow-sm dark:shadow-none transition-colors min-h-[300px]">
+                <motion.div variants={item} className="md:col-span-2 md:row-span-2 bg-white dark:bg-zinc-900 rounded-3xl p-8 border border-zinc-200 dark:border-white/5 relative overflow-hidden group shadow-sm dark:shadow-none transition-colors min-h-[250px] md:min-h-[300px]">
                     <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <h3 className="text-2xl font-semibold text-zinc-900 dark:text-white mb-4">{t('about.aboutTitle')}</h3>
                     <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-lg">
@@ -129,7 +129,7 @@ export function BentoGrid() {
                 </motion.div>
 
                 {/* Tech Stack - Vertical */}
-                <motion.div variants={item} className="md:col-span-1 md:row-span-2 bg-white dark:bg-zinc-900 rounded-3xl p-8 border border-zinc-200 dark:border-white/5 flex flex-col justify-between shadow-sm dark:shadow-none transition-colors min-h-[300px]">
+                <motion.div variants={item} className="md:col-span-1 md:row-span-2 bg-white dark:bg-zinc-900 rounded-3xl p-8 border border-zinc-200 dark:border-white/5 flex flex-col justify-between shadow-sm dark:shadow-none transition-colors min-h-[250px] md:min-h-[300px]">
                     <div>
                         <h3 className="text-xl font-semibold text-zinc-900 dark:text-white mb-6">{t('about.stackTitle')}</h3>
                         <ul className="space-y-3 text-zinc-600 dark:text-zinc-400">
