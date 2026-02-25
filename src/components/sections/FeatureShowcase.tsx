@@ -29,9 +29,9 @@ export function FeatureShowcase() {
     return (
         <section
             ref={containerRef}
-            className="relative h-[300vh] bg-white dark:bg-black"
+            className="relative lg:h-[300vh] bg-white dark:bg-black py-20 lg:py-0"
         >
-            <div className="sticky top-0 h-screen overflow-hidden flex items-center">
+            <div className="lg:sticky lg:top-0 lg:h-screen lg:overflow-hidden flex flex-col lg:items-center">
 
                 {/* Right Column: Preview (Absolute positioned to right for cut-off effect) */}
                 <div className="hidden lg:block absolute top-1/2 right-0 -translate-y-1/2 w-[60vw] h-[70vh] z-0">
@@ -61,27 +61,15 @@ export function FeatureShowcase() {
                     ))}
                 </div>
 
-                {/* Mobile Preview (Inline) */}
+                {/* Mobile Preview (Inline - disabled as image is moved to list) */}
+                {/* 
                 <div className="lg:hidden absolute top-24 left-0 right-0 h-64 px-6 z-0">
-                    {PROJECTS.map((project, index) => (
-                        <motion.div
-                            key={index}
-                            className="absolute inset-6 rounded-xl overflow-hidden border border-zinc-200 dark:border-white/10"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: activeIndex === index ? 1 : 0 }}
-                        >
-                            <Image
-                                src={project.image}
-                                alt={project.title}
-                                fill
-                                className="object-cover"
-                            />
-                        </motion.div>
-                    ))}
-                </div>
+                    ...
+                </div> 
+                */}
 
                 {/* Left Column: List (In Container) */}
-                <div className="w-full px-6 lg:px-24 h-full flex flex-col pointer-events-none pt-20">
+                <div className="w-full px-6 lg:px-24 h-full flex flex-col lg:pointer-events-none lg:pt-20">
                     <div className="w-full lg:w-[40%] pointer-events-auto z-10 lg:mt-0">
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
@@ -92,24 +80,34 @@ export function FeatureShowcase() {
                             {t('projects.title')}
                         </motion.h2>
 
-                        <div className="flex flex-col gap-8">
+                        <div className="flex flex-col gap-16 lg:gap-8">
                             {PROJECTS.map((project, index) => (
                                 <div
                                     key={index}
-                                    className={`transition-all duration-500 pl-6 cursor-pointer border-l-4
+                                    className={`transition-all duration-500 lg:pl-6 cursor-pointer lg:border-l-4
                                         ${activeIndex === index
-                                            ? 'border-indigo-500 opacity-100'
-                                            : 'border-zinc-200 dark:border-zinc-800 opacity-40 hover:opacity-70'
+                                            ? 'lg:border-indigo-500 lg:opacity-100'
+                                            : 'lg:border-zinc-200 dark:lg:border-zinc-800 lg:opacity-40 hover:opacity-70'
                                         }`}
                                     onClick={() => {
                                         // Optional interaction
                                     }}
                                 >
-                                    <h3 className={`text-2xl lg:text-3xl font-bold mb-3 transition-colors ${activeIndex === index ? 'text-zinc-900 dark:text-white' : 'text-zinc-500'}`}>
+                                    {/* Mobile Image (Only visible on small screens) */}
+                                    <div className="lg:hidden w-full aspect-video rounded-xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-white/10">
+                                        <Image
+                                            src={project.image}
+                                            alt={project.title}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+
+                                    <h3 className={`text-2xl lg:text-3xl font-bold mb-3 transition-colors ${activeIndex === index ? 'text-zinc-900 dark:text-white' : 'lg:text-zinc-500 text-zinc-900 dark:text-white'}`}>
                                         {project.title}
                                     </h3>
 
-                                    <div className={`overflow-hidden transition-all duration-500 ease-in-out ${activeIndex === index ? 'max-h-80 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                                    <div className={`overflow-hidden transition-all duration-500 ease-in-out ${activeIndex === index ? 'lg:max-h-80 lg:opacity-100 lg:mt-4' : 'lg:max-h-0 lg:opacity-0'} max-h-none opacity-100 mt-4`}>
                                         <p className="text-zinc-600 dark:text-zinc-400 text-lg mb-6 leading-relaxed max-w-md">
                                             {project.description}
                                         </p>
