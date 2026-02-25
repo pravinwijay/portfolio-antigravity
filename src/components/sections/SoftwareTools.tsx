@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 // Using Adobe Premiere icon as proxy for DaVinci Resolve if specific not available
 import { useLanguage } from '../../context/LanguageContext'
+import { getImagePath } from '../../utils/basePath'
 import { TOOLS } from '../../constants/tools'
 
 export function SoftwareTools() {
@@ -28,7 +29,7 @@ export function SoftwareTools() {
                         {typeof tool.icon === 'string' ? (
                             <div className="relative w-12 h-12 md:w-16 md:h-16 grayscale group-hover:grayscale-0 transition-all duration-300">
                                 <Image
-                                    src={tool.icon}
+                                    src={getImagePath(tool.icon)}
                                     alt={tool.name}
                                     fill
                                     className="object-contain"

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { getImagePath } from '../../utils/basePath'
 
 export function CharacterAvatar() {
     return (
@@ -14,7 +15,7 @@ export function CharacterAvatar() {
                 className="relative w-64 h-64"
             >
                 <Image
-                    src="/avatar.png"
+                    src={getImagePath("/avatar.png")}
                     alt="Avatar"
                     fill
                     className="object-contain drop-shadow-2xl"

@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
+import { getImagePath } from '../../utils/basePath'
 import { PROJECTS } from '../../constants/projects'
 import { useLanguage } from '../../context/LanguageContext'
 import { ArrowUpRight, Github } from 'lucide-react'
@@ -49,7 +50,7 @@ export function FeatureShowcase() {
                         >
                             <div className="relative w-full h-full rounded-l-3xl overflow-hidden shadow-2xl border-l border-t border-b border-zinc-200 dark:border-white/10 bg-zinc-100 dark:bg-zinc-900">
                                 <Image
-                                    src={project.image}
+                                    src={getImagePath(project.image)}
                                     alt={project.title}
                                     fill
                                     className="object-cover object-left-top"
@@ -96,7 +97,7 @@ export function FeatureShowcase() {
                                     {/* Mobile Image (Only visible on small screens) */}
                                     <div className="lg:hidden w-full aspect-video rounded-xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-white/10">
                                         <Image
-                                            src={project.image}
+                                            src={getImagePath(project.image)}
                                             alt={project.title}
                                             fill
                                             className="object-cover"
