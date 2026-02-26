@@ -13,7 +13,7 @@ export const PROJECTS: Project[] = [
         description: "Un clone de l'interface Spotify pour explorer les fonctionnalités de Next.js.",
         tags: ["Next.js", "TypeScript", "Tailwind"],
         links: { demo: "#", repo: "https://github.com/pravinwijay/spotify" },
-        image: "/images/projects/spotify-clone.png"
+        image: "/images/projects/spotify.png"
     },
     {
         title: "Design Patterns JEE",
