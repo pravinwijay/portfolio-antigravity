@@ -32,7 +32,7 @@ export function Hero() {
                         {t('hero.ctaGithub')}
                     </motion.a>
                     <motion.a
-                        href="mailto:contact@pravin.dev"
+                        href="mailto:pravinwijay@gmail.com"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="px-6 py-3 border border-zinc-200 dark:border-white/20 rounded-lg font-medium text-lg text-zinc-900 dark:text-white hover:bg-zinc-100 dark:hover:bg-white/10 transition-colors w-full sm:w-auto text-center"
