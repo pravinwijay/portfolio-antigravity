@@ -38,6 +38,9 @@ export const translations = {
             title: "Quelques projets...",
             viewCode: "Code",
             liveDemo: "Demo",
+            notDeployedTitle: "Bientôt disponible",
+            notDeployedDesc: "Le site n'est pas encore déployé. Je travaille dessus pour le mettre en ligne très prochainement !",
+            notDeployedBtn: "J'ai compris",
         },
         tools: {
             title: "Et en dehors du dev...",
@@ -83,6 +86,9 @@ export const translations = {
             title: "Recent Projects",
             viewCode: "Code",
             liveDemo: "Demo",
+            notDeployedTitle: "Coming soon",
+            notDeployedDesc: "The site is not deployed yet. I'm working on getting it online very soon!",
+            notDeployedBtn: "Understood",
         },
         tools: {
             title: "Tools & Software",
@@ -128,6 +134,9 @@ export const translations = {
             title: "Dự án gần đây",
             viewCode: "Mã nguồn",
             liveDemo: "Demo",
+            notDeployedTitle: "Sắp ra mắt",
+            notDeployedDesc: "Trang web chưa được triển khai. Tôi đang làm việc để sớm đưa nó lên mạng!",
+            notDeployedBtn: "Đã hiểu",
         },
         tools: {
             title: "Công cụ & Phần mềm",
@@ -173,6 +182,9 @@ export const translations = {
             title: "சமீபத்திய திட்டங்கள்",
             viewCode: "நிரல்",
             liveDemo: "முன்னோட்டம்",
+            notDeployedTitle: "விரைவில்",
+            notDeployedDesc: "தளம் இன்னும் பதிவேற்றப்படவில்லை. விரைவில் இதைத் தொகுத்து வழங்குவேன்!",
+            notDeployedBtn: "புரிந்தது",
         },
         tools: {
             title: "மென்பொருள் கருவிகள்",
@@ -218,6 +230,9 @@ export const translations = {
             title: "近期项目",
             viewCode: "代码",
             liveDemo: "演示",
+            notDeployedTitle: "敬请期待",
+            notDeployedDesc: "该网站尚未部署。我正在努力尽快上线！",
+            notDeployedBtn: "明白了",
         },
         tools: {
             title: "工具与软件",
@@ -263,6 +278,9 @@ export const translations = {
             title: "مشاريع حديثة",
             viewCode: "الكود",
             liveDemo: "عرض",
+            notDeployedTitle: "قريباً",
+            notDeployedDesc: "لم يتم نشر الموقع بعد. أعمل على رفعه قريباً جداً!",
+            notDeployedBtn: "مفهوم",
         },
         tools: {
             title: "أدوات وبرامج",
@@ -308,6 +326,9 @@ export const translations = {
             title: "โครงการล่าสุด",
             viewCode: "โค้ด",
             liveDemo: "ตัวอย่าง",
+            notDeployedTitle: "เร็วๆ นี้",
+            notDeployedDesc: "เว็บไซต์ยังไม่เปิดให้บริการ กำลังดำเนินการเพื่อให้พร้อมใช้งานในเร็วๆ นี้!",
+            notDeployedBtn: "เข้าใจแล้ว",
         },
         tools: {
             title: "เครื่องมือ & ซอฟต์แวร์",

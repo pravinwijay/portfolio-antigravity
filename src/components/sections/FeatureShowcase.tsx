@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef, useState, useEffect } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import { getImagePath } from '../../utils/basePath'
 import { PROJECTS } from '../../constants/projects'
@@ -12,6 +12,7 @@ export function FeatureShowcase() {
     const { t } = useLanguage()
     const containerRef = useRef<HTMLDivElement>(null)
     const [activeIndex, setActiveIndex] = useState(0)
+    const [showDemoModal, setShowDemoModal] = useState(false)
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -122,14 +123,23 @@ export function FeatureShowcase() {
                                         </div>
 
                                         <div className="flex gap-6">
-                                            <a
-                                                href={project.links.demo}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold hover:underline"
-                                            >
-                                                {t('projects.liveDemo')} <ArrowUpRight className="w-4 h-4" />
-                                            </a>
+                                            {project.links.demo === "#" ? (
+                                                <button
+                                                    onClick={() => setShowDemoModal(true)}
+                                                    className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold hover:underline"
+                                                >
+                                                    {t('projects.liveDemo')} <ArrowUpRight className="w-4 h-4" />
+                                                </button>
+                                            ) : (
+                                                <a
+                                                    href={project.links.demo}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold hover:underline"
+                                                >
+                                                    {t('projects.liveDemo')} <ArrowUpRight className="w-4 h-4" />
+                                                </a>
+                                            )}
                                             <a
                                                 href={project.links.repo}
                                                 target="_blank"
@@ -147,6 +157,42 @@ export function FeatureShowcase() {
                 </div>
 
             </div>
+
+            <AnimatePresence>
+                {showDemoModal && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+                        onClick={() => setShowDemoModal(false)}
+                    >
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                            className="bg-white dark:bg-zinc-900 rounded-3xl p-8 max-w-sm w-full shadow-2xl border border-zinc-200 dark:border-zinc-800 text-center relative"
+                            onClick={e => e.stopPropagation()}
+                        >
+                            <div className="w-16 h-16 bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <span className="text-3xl">🚀</span>
+                            </div>
+                            <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-2">
+                                {t('projects.notDeployedTitle')}
+                            </h3>
+                            <p className="text-zinc-600 dark:text-zinc-400 mb-8 leading-relaxed">
+                                {t('projects.notDeployedDesc')}
+                            </p>
+                            <button
+                                onClick={() => setShowDemoModal(false)}
+                                className="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-semibold transition-colors"
+                            >
+                                {t('projects.notDeployedBtn')}
+                            </button>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     )
 }
