@@ -9,7 +9,7 @@ export const PROJECTS: Project[] = [
         image: "/images/projects/pw-cakes.png"
     },
     {
-        title: "MySpotify",
+        title: "Fake Spotify",
         description: "Un clone de l'interface Spotify pour explorer les fonctionnalités de Next.js.",
         tags: ["Next.js", "TypeScript", "Tailwind"],
         links: { demo: "#", repo: "https://github.com/pravinwijay/spotify" },

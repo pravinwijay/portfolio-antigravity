@@ -61,7 +61,7 @@ export const EDUCATION: Education[] = [
     {
         title: "Mastère Dev. Manager Fullstack",
         school: "EFREI Paris",
-        date: "Depuis 09/2024",
+        date: "Depuis 09/2025",
         details: "RNCP 39765 - Expert en Architecture et Développement Logiciel",
         stack: "Golang, Angular, Nest.js, Flutter, Rust, Micro Services, RabbitMQ/Kafka, GraphQL, AWS",
         type: "edu",
@@ -71,7 +71,7 @@ export const EDUCATION: Education[] = [
     {
         title: "Bachelor Développeur Web & Applications",
         school: "EFREI Paris",
-        date: "01/2024 - 03/2024",
+        date: "2024 - 2025",
         details: "RNCP 39608 - Concepteur Développeur d'Application",
         stack: "React.JS, Vue.js, Symfony, Spring Boot, iOS Swift, Docker, Stack ELK, OWASP Secure Coding, Figma, UML",
         type: "edu",
@@ -81,7 +81,7 @@ export const EDUCATION: Education[] = [
     {
         title: "BTS Services Informatiques aux Organisations",
         school: "Lycée Jean Rostand Chantilly",
-        date: "2021 - 2023",
+        date: "2022 - 2024",
         details: "Option SLAM (Solutions Logicielles et Applications Métiers)",
         stack: "Java, PHP, SQL, HTML/CSS, JavaScript, Git",
         type: "edu",
