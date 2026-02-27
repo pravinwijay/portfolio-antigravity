@@ -5,14 +5,14 @@ export const translations = {
         hero: {
             title1: "Développeur",
             title2: "Créatif.",
-            subtitle: "Je crée des expériences numériques immersives alliant design et ingénierie. Passionné par la performance, l'accessibilité et l'esthétique moderne.",
+            subtitle: "Je suis Pravin Wijayasuntharam, développeur passionné par l'intersection entre code et design. Je crée des expériences numériques immersives alliant design et ingénierie.",
             ctaGithub: "GitHub",
             ctaContact: "Me Contacter",
         },
         about: {
             title: "À propos de moi et mes compétences",
             aboutTitle: "À Propos",
-            aboutText: "Je suis un développeur passionné par l'intersection entre code et design. Contrairement aux ingénieurs traditionnels, je me concentre sur le 'ressenti' d'une application. Que ce soit une micro-interaction ou une interface complexe, chaque pixel a son importance.",
+            aboutText: "Suite à l'obtention de mon diplôme du BTS, j'ai commencé à travailler en tant qu'alternant au sein de la Mutuelle des Architectes Français Assurances (MAF Assurances). Je suis actuellement en Master Dev Manager Fullstack à l'EFREI-Paris, toujours en alternance. En dehors du dev, j'aime la conception 3D, ainsi que le design.",
             stackTitle: "Stack Technique",
             experienceTitle: "Expériences Professionnelles",
             educationTitle: "Formations",
