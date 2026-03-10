@@ -12,7 +12,7 @@ export const translations = {
         about: {
             title: "À propos de moi et mes compétences",
             aboutTitle: "À Propos",
-            aboutText: "Suite à l'obtention de mon diplôme du BTS, j'ai commencé à travailler en tant qu'alternant au sein de la Mutuelle des Architectes Français Assurances (MAF Assurances). Je suis actuellement en Master Dev Manager Fullstack à l'EFREI-Paris, toujours en alternance. En dehors du dev, j'aime la conception 3D, ainsi que le design.",
+            aboutText: "Suite à l'obtention de mon diplôme du BTS, j'ai commencé à travailler en tant qu'alternant au sein de la Mutuelle des Architectes Français Assurances (MAF Assurances). Je suis actuellement en Master Dev Manager Fullstack à l'EFREI-Paris, toujours en alternance. En dehors du dev, j'aime la conception 3D ainsi que le design.",
             stackTitle: "Stack Technique",
             experienceTitle: "Expériences Professionnelles",
             educationTitle: "Formations",

@@ -109,8 +109,8 @@ export function BentoGrid() {
     ];
 
     return (
-        <section className="px-6 lg:px-24 py-20 bg-gray-50 dark:bg-zinc-950 transition-colors">
-            <h2 className="text-3xl font-bold text-zinc-900 dark:text-white mb-12">{t('about.title')}</h2>
+        <section className="px-4 md:px-6 lg:px-24 py-16 md:py-20 bg-gray-50 dark:bg-zinc-950 transition-colors">
+            <h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-white mb-8 md:mb-12">{t('about.title')}</h2>
             <motion.div
                 variants={container}
                 initial="hidden"
@@ -120,19 +120,19 @@ export function BentoGrid() {
             >
 
                 {/* About Block - Large */}
-                <motion.div variants={item} className="md:col-span-2 md:row-span-2 bg-white dark:bg-zinc-900 rounded-3xl p-8 border border-zinc-200 dark:border-white/5 relative overflow-hidden group shadow-sm dark:shadow-none transition-colors min-h-[250px] md:min-h-[300px]">
+                <motion.div variants={item} className="md:col-span-2 md:row-span-2 bg-white dark:bg-zinc-900 rounded-3xl p-6 md:p-8 border border-zinc-200 dark:border-white/5 relative overflow-hidden group shadow-sm dark:shadow-none transition-colors min-h-0 md:min-h-[300px]">
                     <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <h3 className="text-2xl font-semibold text-zinc-900 dark:text-white mb-4">{t('about.aboutTitle')}</h3>
-                    <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-lg">
+                    <h3 className="text-xl md:text-2xl font-semibold text-zinc-900 dark:text-white mb-4">{t('about.aboutTitle')}</h3>
+                    <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-base md:text-lg">
                         {t('about.aboutText')}
                     </p>
                 </motion.div>
 
                 {/* Tech Stack - Vertical */}
-                <motion.div variants={item} className="md:col-span-1 md:row-span-2 bg-white dark:bg-zinc-900 rounded-3xl p-8 border border-zinc-200 dark:border-white/5 flex flex-col justify-between shadow-sm dark:shadow-none transition-colors min-h-[250px] md:min-h-[300px]">
+                <motion.div variants={item} className="md:col-span-1 md:row-span-2 bg-white dark:bg-zinc-900 rounded-3xl p-6 md:p-8 border border-zinc-200 dark:border-white/5 flex flex-col justify-between shadow-sm dark:shadow-none transition-colors min-h-0 md:min-h-[300px]">
                     <div>
-                        <h3 className="text-xl font-semibold text-zinc-900 dark:text-white mb-6">{t('about.stackTitle')}</h3>
-                        <ul className="space-y-3 text-zinc-600 dark:text-zinc-400">
+                        <h3 className="text-xl font-semibold text-zinc-900 dark:text-white mb-4 md:mb-6">{t('about.stackTitle')}</h3>
+                        <ul className="space-y-3 text-zinc-600 dark:text-zinc-400 text-sm md:text-base">
                             <li>React / Next.js</li>
                             <li>TypeScript</li>
                             <li>Tailwind CSS</li>
@@ -144,23 +144,23 @@ export function BentoGrid() {
 
                 {/* Socials / Links - Horizontal */}
                 <div className="md:col-span-1 md:row-span-2 flex flex-col gap-4">
-                    <motion.div variants={item} className="flex-1 bg-zinc-100 dark:bg-zinc-800 rounded-3xl p-6 border border-zinc-200 dark:border-white/5 flex items-center justify-center hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors cursor-pointer text-zinc-900 dark:text-white">
+                    <motion.div variants={item} className="flex-1 bg-zinc-100 dark:bg-zinc-800 rounded-3xl p-4 md:p-6 border border-zinc-200 dark:border-white/5 flex items-center justify-center hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors cursor-pointer text-zinc-900 dark:text-white min-h-[100px]">
                         <a
                             href="https://www.linkedin.com/in/pravinwijay/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="font-medium text-lg hover:underline"
+                            className="font-medium text-base md:text-lg hover:underline flex items-center gap-1"
                         >
                             LinkedIn ↗
                         </a>
                     </motion.div>
 
-                    <motion.div variants={item} className="flex-1 bg-zinc-100 dark:bg-zinc-800 rounded-3xl p-6 border border-zinc-200 dark:border-white/5 flex items-center justify-center hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors cursor-pointer text-zinc-900 dark:text-white">
+                    <motion.div variants={item} className="flex-1 bg-zinc-100 dark:bg-zinc-800 rounded-3xl p-4 md:p-6 border border-zinc-200 dark:border-white/5 flex items-center justify-center hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors cursor-pointer text-zinc-900 dark:text-white min-h-[100px]">
                         <a
                             href="https://youtu.be/oyWMgTLmzTI?si=eSprUxaP037e3agb"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="font-medium text-lg hover:underline"
+                            className="font-medium text-base md:text-lg hover:underline flex items-center gap-1"
                         >
                             YouTube ↗
                         </a>
@@ -168,9 +168,9 @@ export function BentoGrid() {
                 </div>
 
                 {/* Experience Block */}
-                <motion.div variants={item} className="md:col-span-2 bg-white dark:bg-zinc-900 rounded-3xl p-8 border border-zinc-200 dark:border-white/5 shadow-sm dark:shadow-none transition-colors">
-                    <h3 className="text-2xl font-semibold text-zinc-900 dark:text-white mb-8 flex items-center gap-3">
-                        <Briefcase className="w-6 h-6 text-zinc-500" />
+                <motion.div variants={item} className="md:col-span-2 bg-white dark:bg-zinc-900 rounded-3xl p-6 md:p-8 border border-zinc-200 dark:border-white/5 shadow-sm dark:shadow-none transition-colors">
+                    <h3 className="text-xl md:text-2xl font-semibold text-zinc-900 dark:text-white mb-6 md:mb-8 flex items-center gap-3">
+                        <Briefcase className="w-5 h-5 md:w-6 md:h-6 text-zinc-500" />
                         {t('about.experienceTitle')}
                     </h3>
                     <motion.div
@@ -178,18 +178,18 @@ export function BentoGrid() {
                         initial="hidden"
                         whileInView="show"
                         viewport={{ once: true }}
-                        className="space-y-8 border-l-2 border-zinc-200 dark:border-zinc-800 ml-3 pl-8 relative"
+                        className="space-y-6 md:space-y-8 border-l-2 border-zinc-200 dark:border-zinc-800 ml-2 md:ml-3 pl-6 md:pl-8 relative"
                     >
                         {experiences.map((exp, i) => (
                             <motion.div variants={listItem} key={i} className="relative">
-                                <span className={`absolute -left-[41px] top-1 p-2 rounded-full border-4 border-white dark:border-black ${exp.color} text-white`}>
-                                    <exp.icon className="w-4 h-4" />
+                                <span className={`absolute -left-[35px] md:-left-[41px] top-1 p-1.5 md:p-2 rounded-full border-4 border-white dark:border-zinc-900 ${exp.color} text-white`}>
+                                    <exp.icon className="w-3 h-3 md:w-4 md:h-4" />
                                 </span>
-                                <h4 className="text-lg font-bold text-zinc-900 dark:text-white">{exp.title}</h4>
-                                <div className="text-zinc-500 dark:text-zinc-400 font-medium mb-1">
+                                <h4 className="text-base md:text-lg font-bold text-zinc-900 dark:text-white">{exp.title}</h4>
+                                <div className="text-sm md:text-base text-zinc-500 dark:text-zinc-400 font-medium mb-1">
                                     {exp.company}
                                 </div>
-                                <span className="inline-block px-2 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 text-xs rounded mb-2">
+                                <span className="inline-block px-2 py-0.5 md:py-1 bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs rounded mb-2">
                                     {exp.date}
                                 </span>
                             </motion.div>
@@ -198,9 +198,9 @@ export function BentoGrid() {
                 </motion.div>
 
                 {/* Education Block */}
-                <motion.div variants={item} className="md:col-span-2 bg-white dark:bg-zinc-900 rounded-3xl p-8 border border-zinc-200 dark:border-white/5 shadow-sm dark:shadow-none transition-colors">
-                    <h3 className="text-2xl font-semibold text-zinc-900 dark:text-white mb-8 flex items-center gap-3">
-                        <GraduationCap className="w-6 h-6 text-zinc-500" />
+                <motion.div variants={item} className="md:col-span-2 bg-white dark:bg-zinc-900 rounded-3xl p-6 md:p-8 border border-zinc-200 dark:border-white/5 shadow-sm dark:shadow-none transition-colors">
+                    <h3 className="text-xl md:text-2xl font-semibold text-zinc-900 dark:text-white mb-6 md:mb-8 flex items-center gap-3">
+                        <GraduationCap className="w-5 h-5 md:w-6 md:h-6 text-zinc-500" />
                         {t('about.educationTitle')}
                     </h3>
                     <motion.div
@@ -208,18 +208,18 @@ export function BentoGrid() {
                         initial="hidden"
                         whileInView="show"
                         viewport={{ once: true }}
-                        className="space-y-8 border-l-2 border-zinc-200 dark:border-zinc-800 ml-3 pl-8 relative"
+                        className="space-y-6 md:space-y-8 border-l-2 border-zinc-200 dark:border-zinc-800 ml-2 md:ml-3 pl-6 md:pl-8 relative"
                     >
                         {education.map((edu, i) => (
                             <motion.div variants={listItem} key={i} className="relative">
-                                <span className={`absolute -left-[41px] top-1 p-2 rounded-full border-4 border-white dark:border-black bg-zinc-900 dark:bg-white text-white dark:text-black`}>
-                                    <edu.icon className="w-4 h-4" />
+                                <span className={`absolute -left-[35px] md:-left-[41px] top-1 p-1.5 md:p-2 rounded-full border-4 border-white dark:border-zinc-900 bg-zinc-900 dark:bg-white text-white dark:text-black`}>
+                                    <edu.icon className="w-3 h-3 md:w-4 md:h-4" />
                                 </span>
-                                <h4 className="text-lg font-bold text-zinc-900 dark:text-white">{edu.title}</h4>
-                                <div className="text-zinc-500 dark:text-zinc-400 font-medium mb-1">
+                                <h4 className="text-base md:text-lg font-bold text-zinc-900 dark:text-white">{edu.title}</h4>
+                                <div className="text-sm md:text-base text-zinc-500 dark:text-zinc-400 font-medium mb-1">
                                     {edu.school}
                                 </div>
-                                <span className="inline-block px-2 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 text-xs rounded mb-2">
+                                <span className="inline-block px-2 py-0.5 md:py-1 bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs rounded mb-2">
                                     {edu.date}
                                 </span>
                             </motion.div>

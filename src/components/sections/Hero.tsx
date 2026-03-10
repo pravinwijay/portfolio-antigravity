@@ -2,17 +2,22 @@
 
 import { motion } from 'framer-motion'
 import { useLanguage } from '../../context/LanguageContext'
+import { ParticleGalaxy } from '../ui/ParticleGalaxy'
 
 export function Hero() {
     const { t } = useLanguage()
 
     return (
-        <section className="h-[70vh] flex flex-col justify-center px-6 lg:px-24 pt-32 pb-20 relative z-10">
+        <section className="h-[70vh] flex flex-col justify-center px-6 lg:px-24 pt-32 pb-20 relative z-10 overflow-hidden">
+            <div className="absolute inset-0 z-0 opacity-50 dark:opacity-80 pointer-events-none">
+                <ParticleGalaxy />
+            </div>
+
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="space-y-6 max-w-4xl"
+                className="space-y-6 max-w-4xl relative z-10"
             >
                 <h1 className="text-4xl md:text-8xl font-bold tracking-tight text-zinc-900 dark:text-white/90 transition-colors">
                     {t('hero.title1')} <br className="hidden md:block" /> {t('hero.title2')}

@@ -7,6 +7,7 @@ import { getImagePath } from '../../utils/basePath'
 import { PROJECTS } from '../../constants/projects'
 import { useLanguage } from '../../context/LanguageContext'
 import { ArrowUpRight, Github } from 'lucide-react'
+import { ParticleGalaxy } from '../ui/ParticleGalaxy'
 
 export function FeatureShowcase() {
     const { t } = useLanguage()
@@ -28,6 +29,40 @@ export function FeatureShowcase() {
         return () => unsubscribe()
     }, [scrollYProgress])
 
+    const scrollToProject = (index: number) => {
+        if (!containerRef.current) return;
+
+        const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
+
+        if (isDesktop) {
+            const container = containerRef.current;
+            const rect = container.getBoundingClientRect();
+            const startScrollY = window.scrollY + rect.top;
+            const scrollableDistance = rect.height - window.innerHeight;
+
+            // Move clearly into the index's domain
+            const targetProgress = (index / PROJECTS.length) + (0.05 / PROJECTS.length);
+            const targetScrollY = startScrollY + (scrollableDistance * targetProgress);
+
+            window.scrollTo({
+                top: targetScrollY,
+                behavior: 'smooth'
+            });
+        } else {
+            const element = document.getElementById(`project-${index}`);
+            if (element) {
+                const navOffset = 100;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.scrollY - navOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }
+
     return (
         <section
             ref={containerRef}
@@ -37,6 +72,12 @@ export function FeatureShowcase() {
 
                 {/* Right Column: Preview (Absolute positioned to right for cut-off effect) */}
                 <div className="hidden lg:block absolute top-1/2 right-0 -translate-y-1/2 w-[60vw] h-[70vh] z-0">
+
+                    {/* Antigravity Particle Galaxy Effect */}
+                    <div className="absolute inset-0 -ml-[10vw] pr-[10vw] -my-[10vh] z-0 pointer-events-none opacity-60 dark:opacity-100">
+                        <ParticleGalaxy />
+                    </div>
+
                     {PROJECTS.map((project, index) => (
                         <motion.div
                             key={index}
@@ -86,14 +127,13 @@ export function FeatureShowcase() {
                             {PROJECTS.map((project, index) => (
                                 <div
                                     key={index}
+                                    id={`project-${index}`}
                                     className={`transition-all duration-500 lg:pl-6 cursor-pointer lg:border-l-4
                                         ${activeIndex === index
                                             ? 'lg:border-indigo-500 lg:opacity-100'
                                             : 'lg:border-zinc-200 dark:lg:border-zinc-800 lg:opacity-40 hover:opacity-70'
                                         }`}
-                                    onClick={() => {
-                                        // Optional interaction
-                                    }}
+                                    onClick={() => scrollToProject(index)}
                                 >
                                     {/* Mobile Image (Only visible on small screens) */}
                                     <div className="lg:hidden w-full aspect-video rounded-xl overflow-hidden mb-6 relative border border-zinc-200 dark:border-white/10">
