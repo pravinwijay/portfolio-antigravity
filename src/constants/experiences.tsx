@@ -1,6 +1,19 @@
-import { Briefcase, GraduationCap, Building2, Landmark } from 'lucide-react'
+import { GraduationCap } from 'lucide-react'
 import { SiCarrefour } from 'react-icons/si'
+import { FaUtensils } from 'react-icons/fa6'
+import { TbCrane } from 'react-icons/tb'
 import { Experience, Education } from '@/types'
+
+export function BnpParibasIcon({ className }: { className?: string }) {
+    return (
+        <svg viewBox="0 0 100 100" fill="currentColor" className={className}>
+            <path d="M 12,78 C 22,52 44,36 78,24 C 66,30 50,42 40,55 C 31,66 22,74 12,78 Z" />
+            <path d="M 26,64 C 34,43 52,30 81,20 C 70,25 56,36 47,48 C 39,56 31,62 26,64 Z" />
+            <path d="M 40,50 C 46,34 60,24 84,17 C 74,21 62,30 54,40 C 47,47 42,51 40,50 Z" />
+            <path d="M 54,36 C 58,25 68,18 87,14 C 79,17 68,24 62,31 C 57,36 55,39 54,36 Z" />
+        </svg>
+    )
+}
 
 export const EXPERIENCES: Experience[] = [
     {
@@ -9,12 +22,13 @@ export const EXPERIENCES: Experience[] = [
         location: "Paris, 75017",
         date: "Depuis 09/2024",
         desc: [
-            "Développement from scratch d'une application Angular & ASP.NET",
-            "Méthode Agile, CI/CD avec Azure DevOps"
+            "Développement from scratch d’une application Angular & ASP.NET",
+            "Création d’un Batch et mise à jour de la BDD",
+            "CI/CD avec Azure DevOps"
         ],
         type: "work",
-        icon: Building2,
-        color: "bg-blue-500"
+        icon: TbCrane,
+        color: "bg-[#0055A5]"
     },
     {
         title: "Développeur Backend - Stage",
@@ -26,8 +40,8 @@ export const EXPERIENCES: Experience[] = [
             "Tests unitaires, optimisation des requêtes SQL (MySQL), documentation des API"
         ],
         type: "work",
-        icon: Briefcase,
-        color: "bg-indigo-500"
+        icon: FaUtensils,
+        color: "bg-indigo-600"
     },
     {
         title: "Administrateur SharePoint - Stage",
@@ -39,8 +53,8 @@ export const EXPERIENCES: Experience[] = [
             "Réalisation d'un site statique (HTML & JavaScript) filtrant les données d'un fichier .xlsx"
         ],
         type: "work",
-        icon: Landmark,
-        color: "bg-green-600"
+        icon: BnpParibasIcon,
+        color: "bg-[#00965E]"
     },
     {
         title: "Employé Polyvalent - CDI temps partiel",
@@ -48,8 +62,9 @@ export const EXPERIENCES: Experience[] = [
         location: "Saint Maximin, 60740",
         date: "Depuis 01/2023",
         desc: [
-            "Préparation de commandes",
-            "Hôte de caisse"
+            "Préparation de commandes pour le service Drive",
+            "Hôte de caisse",
+            "Relation client"
         ],
         type: "work",
         icon: SiCarrefour,
