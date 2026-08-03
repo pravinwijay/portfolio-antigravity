@@ -24,8 +24,8 @@ export const EXPERIENCES: Experience[] = [
             "CI/CD avec Azure DevOps"
         ],
         type: "work",
-        icon: TbCrane,
-        color: "bg-[#0055A5]"
+        icon: "/images/projects/maf.png",
+        color: "bg-white"
     },
     {
         title: "Développeur Backend - Stage",

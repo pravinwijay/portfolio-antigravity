@@ -2,8 +2,9 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, Briefcase, GraduationCap } from 'lucide-react'
 import { EXPERIENCES, EDUCATION } from '../../constants/experiences'
+import { getImagePath } from '../../utils/basePath'
 
 function renderHighlightedText(text: string) {
     const regex = /(Angular|ASP\.NET|Azure DevOps|Laravel|SQL \(MySQL\)|SharePoint|Relation client)/g;
@@ -36,7 +37,6 @@ function renderHighlightedText(text: string) {
 }
 
 export function Experience() {
-    const WorkIcon = EXPERIENCES[0].icon
     const EduIcon = EDUCATION[0].icon
     const [openExp, setOpenExp] = useState<Record<number, boolean>>({ 0: true, 1: true, 2: true, 3: true });
 
@@ -53,7 +53,7 @@ export function Experience() {
                 {/* Work Experience */}
                 <div>
                     <h3 className="text-2xl font-semibold text-zinc-900 dark:text-white mb-8 flex items-center gap-3">
-                        <WorkIcon className="w-6 h-6 text-zinc-500" />
+                        <Briefcase className="w-6 h-6 text-zinc-500" />
                         Expériences Professionnelles
                     </h3>
                     <div className="space-y-12 border-l-2 border-zinc-200 dark:border-zinc-800 ml-3 pl-8 relative">
@@ -66,8 +66,16 @@ export function Experience() {
                                 transition={{ delay: i * 0.1 }}
                                 className="relative"
                             >
-                                <span className={`absolute -left-[41px] top-1 p-2 rounded-full border-4 border-white dark:border-black ${exp.color} text-white z-10`}>
-                                    <exp.icon className="w-4 h-4" />
+                                <span className={`absolute -left-[41px] top-1 p-2 rounded-full border-4 border-white dark:border-black ${exp.color} text-white z-10 w-9 h-9 flex items-center justify-center overflow-hidden`}>
+                                    {typeof exp.icon === 'string' ? (
+                                        <img
+                                            src={getImagePath(exp.icon)}
+                                            alt={exp.company}
+                                            className="w-full h-full object-contain"
+                                        />
+                                    ) : (
+                                        <exp.icon className="w-4 h-4" />
+                                    )}
                                 </span>
                                 <div
                                     onClick={() => toggleExp(i)}
@@ -119,7 +127,7 @@ export function Experience() {
                 {/* Education */}
                 <div>
                     <h3 className="text-2xl font-semibold text-zinc-900 dark:text-white mb-8 flex items-center gap-3">
-                        <EduIcon className="w-6 h-6 text-zinc-500" />
+                        <GraduationCap className="w-6 h-6 text-zinc-500" />
                         Formations
                     </h3>
                     <div className="space-y-12 border-l-2 border-zinc-200 dark:border-zinc-800 ml-3 pl-8 relative">
@@ -132,8 +140,16 @@ export function Experience() {
                                 transition={{ delay: i * 0.1 }}
                                 className="relative"
                             >
-                                <span className={`absolute -left-[41px] top-1 p-2 rounded-full border-4 border-white dark:border-black bg-zinc-900 dark:bg-white text-white dark:text-black`}>
-                                    <edu.icon className="w-4 h-4" />
+                                <span className={`absolute -left-[41px] top-1 p-2 rounded-full border-4 border-white dark:border-black bg-zinc-900 dark:bg-white text-white dark:text-black w-9 h-9 flex items-center justify-center overflow-hidden`}>
+                                    {typeof edu.icon === 'string' ? (
+                                        <img
+                                            src={getImagePath(edu.icon)}
+                                            alt={edu.school}
+                                            className="w-full h-full object-contain"
+                                        />
+                                    ) : (
+                                        <edu.icon className="w-4 h-4" />
+                                    )}
                                 </span>
                                 <h4 className="text-lg font-bold text-zinc-900 dark:text-white">{edu.title}</h4>
                                 <div className="text-zinc-500 dark:text-zinc-400 font-medium mb-1">

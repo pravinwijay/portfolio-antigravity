@@ -8,7 +8,7 @@ export interface Experience {
     date: string
     desc: string[]
     type: 'work'
-    icon: IconType | LucideIcon
+    icon: IconType | LucideIcon | string
     color: string
 }
 
@@ -19,7 +19,7 @@ export interface Education {
     details: string
     stack: string
     type: 'edu'
-    icon: IconType | LucideIcon
+    icon: IconType | LucideIcon | string
     color: string
 }
 
