@@ -242,7 +242,7 @@ export function BentoGrid() {
                             href="https://www.linkedin.com/in/pravinwijay/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full h-full bg-[#0A66C2]/10 dark:bg-[#0A66C2]/15 border border-[#0A66C2]/20 dark:border-[#0A66C2]/30 rounded-3xl p-4 md:p-6 flex items-center justify-center hover:bg-[#0A66C2]/20 dark:hover:bg-[#0A66C2]/25 transition-colors cursor-pointer text-[#0A66C2] dark:text-[#389cf7] font-medium text-base md:text-lg hover:underline gap-1.5"
+                            className="w-full h-full bg-[#0A66C2]/10 dark:bg-[#0A66C2]/15 border border-[#0A66C2]/20 dark:border-[#0A66C2]/30 rounded-3xl p-4 md:p-6 flex items-center justify-center hover:bg-[#0A66C2] dark:hover:bg-[#0A66C2] transition-colors cursor-pointer text-[#0A66C2] dark:text-[#389cf7] hover:text-white dark:hover:text-white font-medium hover:font-bold text-base md:text-lg gap-1.5"
                         >
                             LinkedIn ↗
                         </a>
@@ -253,7 +253,7 @@ export function BentoGrid() {
                             href="https://youtu.be/oyWMgTLmzTI?si=eSprUxaP037e3agb"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full h-full bg-[#FF0000]/10 dark:bg-[#FF0000]/15 border border-[#FF0000]/20 dark:border-[#FF0000]/30 rounded-3xl p-4 md:p-6 flex items-center justify-center hover:bg-[#FF0000]/20 dark:hover:bg-[#FF0000]/25 transition-colors cursor-pointer text-[#FF0000] dark:text-[#ff4d4d] font-medium text-base md:text-lg hover:underline gap-1.5"
+                            className="w-full h-full bg-[#FF0000]/10 dark:bg-[#FF0000]/15 border border-[#FF0000]/20 dark:border-[#FF0000]/30 rounded-3xl p-4 md:p-6 flex items-center justify-center hover:bg-[#FF0000] dark:hover:bg-[#FF0000] transition-colors cursor-pointer text-[#FF0000] dark:text-[#ff4d4d] hover:text-white dark:hover:text-white font-medium hover:font-bold text-base md:text-lg gap-1.5"
                         >
                             YouTube ↗
                         </a>
