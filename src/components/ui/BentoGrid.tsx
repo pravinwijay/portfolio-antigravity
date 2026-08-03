@@ -8,6 +8,7 @@ import { DiMsqlServer } from 'react-icons/di'
 import { FaUtensils } from 'react-icons/fa6'
 import { TbCrane, TbBrandCSharp } from 'react-icons/tb'
 import { useLanguage } from '../../context/LanguageContext'
+import { getImagePath } from '../../utils/basePath'
 
 function BnpParibasIcon({ className }: { className?: string }) {
     return (
@@ -97,8 +98,8 @@ export function BentoGrid() {
                 "Création d’un Batch et mise à jour de la BDD",
                 "CI/CD avec Azure DevOps"
             ],
-            icon: TbCrane,
-            color: "bg-[#0055A5]"
+            icon: "/images/projects/maf.png",
+            color: "bg-white"
         },
         {
             title: t('about.expRole2'),
@@ -274,8 +275,16 @@ export function BentoGrid() {
                     >
                         {experiences.map((exp, i) => (
                             <motion.div variants={listItem} key={i} className="relative">
-                                <span className={`absolute -left-[35px] md:-left-[41px] top-1 p-1.5 md:p-2 rounded-full border-4 border-white dark:border-zinc-900 ${exp.color} text-white z-10`}>
-                                    <exp.icon className="w-3 h-3 md:w-4 md:h-4" />
+                                <span className={`absolute -left-[35px] md:-left-[41px] top-1 p-1.5 md:p-2 rounded-full border-4 border-white dark:border-zinc-900 ${exp.color} text-white z-10 w-7 h-7 md:w-9 md:h-9 flex items-center justify-center overflow-hidden`}>
+                                    {typeof exp.icon === 'string' ? (
+                                        <img
+                                            src={getImagePath(exp.icon)}
+                                            alt={exp.company}
+                                            className="w-full h-full object-contain"
+                                        />
+                                    ) : (
+                                        <exp.icon className="w-3 h-3 md:w-4 md:h-4" />
+                                    )}
                                 </span>
                                 <div
                                     onClick={() => toggleExp(i)}
