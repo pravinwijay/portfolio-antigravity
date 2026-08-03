@@ -82,7 +82,17 @@ export function Experience() {
                                     className="flex items-start justify-between cursor-pointer select-none group hover:opacity-90 transition-opacity"
                                 >
                                     <div>
-                                        <h4 className="text-lg font-bold text-zinc-900 dark:text-white">{exp.title}</h4>
+                                        <h4 className="text-lg text-zinc-900 dark:text-white flex items-center gap-1.5 flex-wrap">
+                                            {exp.title.includes(' - ') ? (
+                                                <>
+                                                    <span className="font-bold">{exp.title.split(' - ')[0]}</span>
+                                                    <span className="text-zinc-400 dark:text-zinc-500 font-normal">-</span>
+                                                    <span className="font-normal italic text-zinc-600 dark:text-zinc-400">{exp.title.split(' - ')[1]}</span>
+                                                </>
+                                            ) : (
+                                                <span className="font-bold">{exp.title}</span>
+                                            )}
+                                        </h4>
                                         <div className="text-zinc-500 dark:text-zinc-400 font-medium mb-2">
                                             {exp.company} - <span className="text-xs">{exp.location}</span>
                                         </div>
