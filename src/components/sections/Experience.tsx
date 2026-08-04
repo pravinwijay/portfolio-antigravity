@@ -12,25 +12,25 @@ function renderHighlightedText(text: string) {
 
     return parts.map((part, index) => {
         if (part === 'Angular') {
-            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-red-500/15 text-red-600 dark:text-red-400 border border-red-500/30">Angular</span>;
+            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-transparent text-red-600 dark:text-red-400 border border-red-500/30">Angular</span>;
         }
         if (part === 'ASP.NET') {
-            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-purple-500/15 text-purple-600 dark:text-purple-400 border border-purple-500/30">ASP.NET</span>;
+            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-transparent text-purple-600 dark:text-purple-400 border border-purple-500/30">ASP.NET</span>;
         }
         if (part === 'Azure DevOps') {
-            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/30">Azure DevOps</span>;
+            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-transparent text-blue-600 dark:text-blue-400 border border-blue-500/30">Azure DevOps</span>;
         }
         if (part === 'Laravel') {
-            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-rose-500/15 text-rose-600 dark:text-rose-400 border border-rose-500/30">Laravel</span>;
+            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-transparent text-rose-600 dark:text-rose-400 border border-rose-500/30">Laravel</span>;
         }
         if (part === 'SQL (MySQL)') {
-            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-cyan-500/15 text-cyan-600 dark:text-cyan-400 border border-cyan-500/30">SQL (MySQL)</span>;
+            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-transparent text-cyan-600 dark:text-cyan-400 border border-cyan-500/30">SQL (MySQL)</span>;
         }
         if (part === 'SharePoint') {
-            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">SharePoint</span>;
+            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-transparent text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">SharePoint</span>;
         }
         if (part === 'Relation client') {
-            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/30">Relation client</span>;
+            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-transparent text-amber-600 dark:text-amber-400 border border-amber-500/30">Relation client</span>;
         }
         return part;
     });
@@ -66,12 +66,12 @@ export function Experience() {
                                 transition={{ delay: i * 0.1 }}
                                 className="relative"
                             >
-                                <span className={`absolute -left-[41px] top-1 p-2 rounded-full border-4 border-white dark:border-black ${exp.color} text-white z-10 w-9 h-9 flex items-center justify-center overflow-hidden`}>
+                                <span className={`absolute -left-[41px] top-1 ${exp.company === 'MAF Assurances' ? 'p-0.5' : 'p-2'} rounded-full border-4 border-white dark:border-black ${exp.color} text-white z-10 w-9 h-9 flex items-center justify-center overflow-hidden`}>
                                     {typeof exp.icon === 'string' ? (
                                         <img
                                             src={getImagePath(exp.icon)}
                                             alt={exp.company}
-                                            className="w-full h-full object-contain"
+                                            className={`w-full h-full object-contain ${exp.company === 'MAF Assurances' ? 'scale-125' : ''}`}
                                         />
                                     ) : (
                                         <exp.icon className="w-4 h-4" />

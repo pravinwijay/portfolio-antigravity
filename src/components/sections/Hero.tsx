@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { useLanguage } from '../../context/LanguageContext'
 import { ParticleGalaxy } from '../ui/ParticleGalaxy'
+import { SiDiscord } from 'react-icons/si'
 
 export function Hero() {
     const { t } = useLanguage()
@@ -26,7 +27,7 @@ export function Hero() {
                     {t('hero.subtitle')}
                 </p>
 
-                <div className="flex flex-wrap gap-4 pt-4">
+                <div className="flex flex-col sm:flex-row gap-4 pt-4">
                     <motion.a
                         href="https://github.com/pravinwijay"
                         target="_blank"
@@ -36,14 +37,27 @@ export function Hero() {
                     >
                         {t('hero.ctaGithub')}
                     </motion.a>
-                    <motion.a
-                        href="mailto:pravinwijay@gmail.com"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="px-6 py-3 border border-zinc-200 dark:border-white/20 rounded-lg font-medium text-lg text-zinc-900 dark:text-white hover:bg-zinc-100 dark:hover:bg-white/10 transition-colors w-full sm:w-auto text-center"
-                    >
-                        {t('hero.ctaContact')}
-                    </motion.a>
+                    <div className="flex gap-4 w-full sm:w-auto">
+                        <motion.a
+                            href="mailto:pravinwijay@gmail.com"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="px-6 py-3 border border-zinc-200 dark:border-white/20 rounded-lg font-medium text-lg text-zinc-900 dark:text-white hover:bg-zinc-100 dark:hover:bg-white/10 transition-colors flex-1 sm:flex-initial sm:px-6 text-center"
+                        >
+                            {t('hero.ctaContact')}
+                        </motion.a>
+                        <motion.a
+                            href="https://discord.com/users/praviin93"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="h-[52px] w-[52px] flex items-center justify-center border border-zinc-200 dark:border-white/20 rounded-lg text-zinc-900 dark:text-white hover:bg-zinc-100 dark:hover:bg-white/10 transition-colors shrink-0"
+                            title="Discord: praviin93"
+                        >
+                            <SiDiscord className="w-6 h-6" />
+                        </motion.a>
+                    </div>
                 </div>
             </motion.div>
         </section>
