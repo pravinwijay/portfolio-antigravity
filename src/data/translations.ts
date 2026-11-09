@@ -5,7 +5,7 @@ export const translations = {
         hero: {
             title1: "Pravin",
             title2: "Wijayasuntharam",
-            subtitle: "Je suis Pravin Wijayasuntharam, développeur passionné par l'intersection entre code et design. Je crée des expériences numériques immersives alliant design et ingénierie.",
+            subtitle: "Développeur passionné par l'intersection entre l'ingénierie logicielle et la Data. Je crée des solutions numériques performantes alliant développement et valorisation des données.",
             ctaGithub: "GitHub",
             ctaContact: "Me Contacter",
         },
