@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Briefcase, GraduationCap, ChevronDown } from 'lucide-react'
 import { SiCarrefour, SiReact, SiAngular, SiPython, SiApachespark, SiApachehadoop } from 'react-icons/si'
 import { DiMsqlServer } from 'react-icons/di'
-import { FaUtensils } from 'react-icons/fa6'
+import { FaUtensils, FaLinkedinIn, FaPlay } from 'react-icons/fa6'
 import { TbBrandCSharp, TbSql } from 'react-icons/tb'
 import { useLanguage } from '../../context/LanguageContext'
 import { getImagePath } from '../../utils/basePath'
@@ -267,11 +267,11 @@ export function BentoGrid() {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-auto"
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-auto"
             >
 
                 {/* About Block - Large */}
-                <motion.div variants={item} className="md:col-span-2 md:row-span-2 bg-white dark:bg-zinc-900 rounded-3xl p-6 md:p-8 border border-zinc-200 dark:border-white/5 relative overflow-hidden group shadow-sm dark:shadow-none transition-colors min-h-0 md:min-h-[300px]">
+                <motion.div variants={item} className="md:col-span-2 lg:row-span-2 min-w-0 bg-white dark:bg-zinc-900 rounded-3xl p-6 md:p-8 border border-zinc-200 dark:border-white/5 relative overflow-hidden group shadow-sm dark:shadow-none transition-colors min-h-0 lg:min-h-[300px]">
                     <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <h3 className="text-xl md:text-2xl font-semibold text-zinc-900 dark:text-white mb-4">{t('about.aboutTitle')}</h3>
                     <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed text-base md:text-lg">
@@ -280,7 +280,7 @@ export function BentoGrid() {
                 </motion.div>
 
                 {/* Tech Stack - Vertical (Browser Window style) */}
-                <motion.div variants={item} className="md:col-span-1 md:row-span-2 bg-white dark:bg-zinc-900 rounded-3xl border border-zinc-200 dark:border-white/5 flex flex-col shadow-sm dark:shadow-none transition-colors min-h-0 md:min-h-[300px] overflow-hidden">
+                <motion.div variants={item} className="md:col-span-1 lg:col-span-1 lg:row-span-2 min-w-0 bg-white dark:bg-zinc-900 rounded-3xl border border-zinc-200 dark:border-white/5 flex flex-col shadow-sm dark:shadow-none transition-colors min-h-0 lg:min-h-[300px] overflow-hidden">
                     {/* Browser Tabs (Full width of the card, no 3 dots) */}
                     <div className="grid grid-cols-2 w-full bg-zinc-100 dark:bg-zinc-800/80 border-b border-zinc-200 dark:border-white/10">
                         <button
@@ -342,27 +342,29 @@ export function BentoGrid() {
                     </div>
                 </motion.div>
 
-                {/* Socials / Links - Horizontal */}
-                <div className="md:col-span-1 md:row-span-2 flex flex-col gap-4">
-                    <motion.div variants={item} className="flex-1 min-h-[100px]">
+                {/* Socials / Links */}
+                <div className="md:col-span-1 lg:col-span-1 lg:row-span-2 flex flex-row md:flex-col gap-4 min-w-0">
+                    <motion.div variants={item} className="flex-1 min-h-[88px] md:min-h-[100px] min-w-0">
                         <a
                             href="https://www.linkedin.com/in/pravinwijay/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full h-full bg-[#0A66C2]/10 dark:bg-[#0A66C2]/15 border border-[#0A66C2]/20 dark:border-[#0A66C2]/30 rounded-3xl p-4 md:p-6 flex items-center justify-center hover:bg-[#0A66C2] dark:hover:bg-[#0A66C2] transition-all duration-300 hover:scale-[1.03] hover:-translate-y-0.5 active:scale-[0.98] hover:shadow-md cursor-pointer text-[#0A66C2] dark:text-[#389cf7] hover:text-white dark:hover:text-white font-medium hover:font-bold text-base md:text-lg gap-1.5"
+                            aria-label="LinkedIn"
+                            className="w-full h-full bg-[#0A66C2] rounded-3xl p-4 md:p-6 flex items-center justify-center transition-all duration-300 hover:scale-[1.03] hover:-translate-y-0.5 active:scale-[0.98] hover:shadow-lg cursor-pointer text-white"
                         >
-                            LinkedIn ↗
+                            <FaLinkedinIn className="w-9 h-9 md:w-11 md:h-11" />
                         </a>
                     </motion.div>
 
-                    <motion.div variants={item} className="flex-1 min-h-[100px]">
+                    <motion.div variants={item} className="flex-1 min-h-[88px] md:min-h-[100px] min-w-0">
                         <a
                             href="https://youtu.be/oyWMgTLmzTI?si=eSprUxaP037e3agb"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-full h-full bg-[#FF0000]/10 dark:bg-[#FF0000]/15 border border-[#FF0000]/20 dark:border-[#FF0000]/30 rounded-3xl p-4 md:p-6 flex items-center justify-center hover:bg-[#FF0000] dark:hover:bg-[#FF0000] transition-all duration-300 hover:scale-[1.03] hover:-translate-y-0.5 active:scale-[0.98] hover:shadow-md cursor-pointer text-[#FF0000] dark:text-[#ff4d4d] hover:text-white dark:hover:text-white font-medium hover:font-bold text-base md:text-lg gap-1.5"
+                            aria-label="YouTube"
+                            className="w-full h-full bg-[#FF0000] rounded-3xl p-4 md:p-6 flex items-center justify-center transition-all duration-300 hover:scale-[1.03] hover:-translate-y-0.5 active:scale-[0.98] hover:shadow-lg cursor-pointer text-white"
                         >
-                            YouTube ↗
+                            <FaPlay className="w-8 h-8 md:w-10 md:h-10 translate-x-0.5" />
                         </a>
                     </motion.div>
                 </div>

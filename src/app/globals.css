@@ -35,4 +35,25 @@ body {
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Prevent horizontal shifting on any screen (clip keeps position: sticky working) */
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  min-height: 100dvh;
+  overflow-wrap: break-word;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
 }

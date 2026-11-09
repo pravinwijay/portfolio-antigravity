@@ -77,9 +77,9 @@ export function FeatureShowcase() {
     return (
         <section
             ref={containerRef}
-            className={`relative ${filteredProjects.length > 1 ? 'lg:h-[300vh]' : 'lg:min-h-screen'} bg-white dark:bg-black py-20 lg:py-0`}
+            className={`relative ${filteredProjects.length > 1 ? 'lg:h-[300vh]' : 'lg:min-h-dvh'} bg-white dark:bg-black py-20 lg:py-0`}
         >
-            <div className="lg:sticky lg:top-0 lg:h-screen lg:overflow-hidden flex flex-col lg:items-center">
+            <div className="lg:sticky lg:top-0 lg:h-dvh lg:overflow-hidden flex flex-col lg:items-center">
 
                 {/* Right Column: Preview (Absolute positioned to right for cut-off effect) */}
                 <div className="hidden lg:block absolute top-1/2 right-0 -translate-y-1/2 w-[60vw] h-[70vh] z-0">

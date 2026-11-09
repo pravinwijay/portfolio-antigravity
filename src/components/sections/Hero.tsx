@@ -9,7 +9,7 @@ export function Hero() {
     const { t } = useLanguage()
 
     return (
-        <section className="h-[70vh] flex flex-col justify-center px-6 lg:px-24 pt-32 pb-20 relative z-10 overflow-hidden">
+        <section className="min-h-[70svh] flex flex-col justify-center px-5 sm:px-6 lg:px-24 pt-28 sm:pt-32 pb-16 sm:pb-20 relative z-10 overflow-hidden">
             <div className="absolute inset-0 z-0 opacity-50 dark:opacity-80 pointer-events-none">
                 <ParticleGalaxy />
             </div>
@@ -20,10 +20,10 @@ export function Hero() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="space-y-6 max-w-4xl relative z-10"
             >
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-zinc-900 dark:text-white/90 transition-colors">
+                <h1 className="text-[1.65rem] min-[380px]:text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-zinc-900 dark:text-white/90 transition-colors break-words">
                     {t('hero.title1')} <br className="hidden md:block" /> {t('hero.title2')}
                 </h1>
-                <p className="text-xl md:text-2xl text-zinc-600 dark:text-white/60 max-w-2xl leading-relaxed transition-colors">
+                <p className="text-base sm:text-xl md:text-2xl text-zinc-600 dark:text-white/60 max-w-2xl leading-relaxed transition-colors">
                     {t('hero.subtitle')}
                 </p>
 
