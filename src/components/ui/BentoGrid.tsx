@@ -281,65 +281,64 @@ export function BentoGrid() {
 
                 {/* Tech Stack - Vertical (Browser Window style) */}
                 <motion.div variants={item} className="md:col-span-1 md:row-span-2 bg-white dark:bg-zinc-900 rounded-3xl border border-zinc-200 dark:border-white/5 flex flex-col shadow-sm dark:shadow-none transition-colors min-h-0 md:min-h-[300px] overflow-hidden">
-                    <div className="px-6 pt-6 pb-3">
-                        <h3 className="text-xl font-semibold text-zinc-900 dark:text-white mb-4">{t('about.stackTitle')}</h3>
+                    {/* Browser Tabs (Full width of the card, no 3 dots) */}
+                    <div className="grid grid-cols-2 w-full bg-zinc-100 dark:bg-zinc-800/80 border-b border-zinc-200 dark:border-white/10">
+                        <button
+                            type="button"
+                            onClick={() => setActiveStackTab('data')}
+                            className={`py-3 px-4 text-xs font-bold tracking-wider transition-all cursor-pointer select-none border-r border-zinc-200/80 dark:border-white/10 ${
+                                activeStackTab === 'data'
+                                    ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white'
+                                    : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:bg-white/40 dark:hover:bg-zinc-700/40'
+                            }`}
+                        >
+                            DATA
+                        </button>
+                        <button
+                            type="button"
+                            onClick={() => setActiveStackTab('dev')}
+                            className={`py-3 px-4 text-xs font-bold tracking-wider transition-all cursor-pointer select-none ${
+                                activeStackTab === 'dev'
+                                    ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white'
+                                    : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:bg-white/40 dark:hover:bg-zinc-700/40'
+                            }`}
+                        >
+                            DEV
+                        </button>
+                    </div>
 
-                        {/* Browser Window Header & Tabs */}
-                        <div className="bg-zinc-100 dark:bg-zinc-800/80 rounded-t-2xl pt-2 px-2.5 flex items-center gap-2 border-t border-x border-zinc-200/80 dark:border-white/10">
-                            <div className="flex items-center gap-1.5 px-1 pb-1.5">
-                                <span className="w-2.5 h-2.5 rounded-full bg-red-400/80" />
-                                <span className="w-2.5 h-2.5 rounded-full bg-amber-400/80" />
-                                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400/80" />
-                            </div>
-                            <div className="flex flex-1 gap-1">
-                                <button
-                                    type="button"
-                                    onClick={() => setActiveStackTab('data')}
-                                    className={`flex-1 py-1.5 px-3 text-xs font-bold tracking-wider rounded-t-xl transition-all cursor-pointer select-none ${
-                                        activeStackTab === 'data'
-                                            ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white shadow-sm'
-                                            : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:bg-white/40 dark:hover:bg-zinc-700/40'
-                                    }`}
-                                >
-                                    DATA
-                                </button>
-                                <button
-                                    type="button"
-                                    onClick={() => setActiveStackTab('dev')}
-                                    className={`flex-1 py-1.5 px-3 text-xs font-bold tracking-wider rounded-t-xl transition-all cursor-pointer select-none ${
-                                        activeStackTab === 'dev'
-                                            ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white shadow-sm'
-                                            : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:bg-white/40 dark:hover:bg-zinc-700/40'
-                                    }`}
-                                >
-                                    DEV
-                                </button>
-                            </div>
+                    {/* URL Bar Section */}
+                    <div className="px-3 py-2 bg-zinc-50 dark:bg-zinc-900 border-b border-zinc-200 dark:border-white/10">
+                        <div className="w-full px-3 py-1.5 rounded-lg bg-zinc-100 dark:bg-zinc-800/90 border border-zinc-200/80 dark:border-white/5 text-xs font-medium text-zinc-600 dark:text-zinc-300 flex items-center select-none">
+                            <span className="text-zinc-400 dark:text-zinc-500">{t('about.stackTitle')}/</span>
+                            <span className="text-zinc-900 dark:text-white font-semibold">
+                                {activeStackTab === 'data' ? 'Data' : 'Dev'}
+                            </span>
                         </div>
+                    </div>
 
-                        {/* Browser Window Content */}
-                        <div className="border border-zinc-200/80 dark:border-white/10 rounded-b-2xl p-3 bg-white dark:bg-zinc-900">
-                            <AnimatePresence mode="wait">
-                                <motion.ul
-                                    key={activeStackTab}
-                                    initial={{ opacity: 0, y: 6 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -6 }}
-                                    transition={{ duration: 0.18 }}
-                                    className="space-y-1.5"
-                                >
-                                    {currentStack.map((tech) => (
-                                        <li
-                                            key={tech.name}
-                                            className={`px-3 py-2 rounded-xl border border-transparent bg-transparent ${tech.hoverClass} transition-all duration-300 cursor-pointer flex items-center gap-2 font-medium text-sm md:text-base group select-none`}
-                                        >
-                                            <tech.icon className={`w-0 opacity-0 group-hover:w-5 group-hover:opacity-100 ${tech.iconColor} transition-all duration-300 shrink-0`} />
-                                            <span>{tech.name}</span>
-                                        </li>
-                                    ))}
-                                </motion.ul>
-                            </AnimatePresence>
-                        </div>
+                    {/* Browser Window Content */}
+                    <div className="p-4 md:p-5 flex-1 bg-white dark:bg-zinc-900">
+                        <AnimatePresence mode="wait">
+                            <motion.ul
+                                key={activeStackTab}
+                                initial={{ opacity: 0, y: 6 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -6 }}
+                                transition={{ duration: 0.18 }}
+                                className="space-y-1.5"
+                            >
+                                {currentStack.map((tech) => (
+                                    <li
+                                        key={tech.name}
+                                        className={`px-3 py-2 rounded-xl border border-transparent bg-transparent ${tech.hoverClass} transition-all duration-300 cursor-pointer flex items-center gap-2 font-medium text-sm md:text-base group select-none`}
+                                    >
+                                        <tech.icon className={`w-0 opacity-0 group-hover:w-5 group-hover:opacity-100 ${tech.iconColor} transition-all duration-300 shrink-0`} />
+                                        <span>{tech.name}</span>
+                                    </li>
+                                ))}
+                            </motion.ul>
+                        </AnimatePresence>
                     </div>
                 </motion.div>
 

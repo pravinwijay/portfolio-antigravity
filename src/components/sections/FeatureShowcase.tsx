@@ -156,40 +156,32 @@ export function FeatureShowcase() {
                             {t('projects.title')}
                         </motion.h2>
 
-                        {/* Browser Window Header & Tabs for Projects */}
+                        {/* Browser Tabs for Projects (no rounded corners, no 3 dots, no URL bar) */}
                         <div className="mb-8 max-w-md">
-                            <div className="bg-zinc-100 dark:bg-zinc-800/80 rounded-t-2xl pt-2 px-3 flex items-center gap-3 border-t border-x border-zinc-200/80 dark:border-white/10">
-                                <div className="flex items-center gap-1.5 px-1 pb-1.5">
-                                    <span className="w-2.5 h-2.5 rounded-full bg-red-400/80" />
-                                    <span className="w-2.5 h-2.5 rounded-full bg-amber-400/80" />
-                                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400/80" />
-                                </div>
-                                <div className="flex flex-1 gap-1">
-                                    <button
-                                        type="button"
-                                        onClick={() => setActiveProjectTab('data')}
-                                        className={`flex-1 py-2 px-4 text-xs font-bold tracking-wider rounded-t-xl transition-all cursor-pointer select-none ${
-                                            activeProjectTab === 'data'
-                                                ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white shadow-sm'
-                                                : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:bg-white/40 dark:hover:bg-zinc-700/40'
-                                        }`}
-                                    >
-                                        DATA
-                                    </button>
-                                    <button
-                                        type="button"
-                                        onClick={() => setActiveProjectTab('dev')}
-                                        className={`flex-1 py-2 px-4 text-xs font-bold tracking-wider rounded-t-xl transition-all cursor-pointer select-none ${
-                                            activeProjectTab === 'dev'
-                                                ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white shadow-sm'
-                                                : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:bg-white/40 dark:hover:bg-zinc-700/40'
-                                        }`}
-                                    >
-                                        DEV
-                                    </button>
-                                </div>
+                            <div className="grid grid-cols-2 w-full bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200/80 dark:border-white/10">
+                                <button
+                                    type="button"
+                                    onClick={() => setActiveProjectTab('data')}
+                                    className={`py-2.5 px-4 text-xs font-bold tracking-wider transition-all cursor-pointer select-none border-r border-zinc-200/80 dark:border-white/10 ${
+                                        activeProjectTab === 'data'
+                                            ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white'
+                                            : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:bg-white/40 dark:hover:bg-zinc-700/40'
+                                    }`}
+                                >
+                                    DATA
+                                </button>
+                                <button
+                                    type="button"
+                                    onClick={() => setActiveProjectTab('dev')}
+                                    className={`py-2.5 px-4 text-xs font-bold tracking-wider transition-all cursor-pointer select-none ${
+                                        activeProjectTab === 'dev'
+                                            ? 'bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white'
+                                            : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 hover:bg-white/40 dark:hover:bg-zinc-700/40'
+                                    }`}
+                                >
+                                    DEV
+                                </button>
                             </div>
-                            <div className="h-1 bg-white dark:bg-zinc-900 border-x border-b border-zinc-200/80 dark:border-white/10 rounded-b-lg" />
                         </div>
 
                         <AnimatePresence mode="wait">
