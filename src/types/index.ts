@@ -14,10 +14,13 @@ export interface Experience {
 
 export interface Education {
     title: string
+    rncp?: string
     school: string
+    location?: string
     date: string
-    details: string
-    stack: string
+    details?: string
+    desc: string[]
+    stack?: string
     type: 'edu'
     icon: IconType | LucideIcon | string
     color: string
@@ -32,6 +35,8 @@ export interface Project {
         repo: string
     }
     image: string
+    category?: 'data' | 'dev'
+    comingSoon?: boolean
 }
 
 export interface Tool {

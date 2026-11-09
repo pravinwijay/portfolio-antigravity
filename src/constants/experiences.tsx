@@ -71,31 +71,42 @@ export const EXPERIENCES: Experience[] = [
 
 export const EDUCATION: Education[] = [
     {
-        title: "Mastère Dev. Manager Fullstack",
+        title: "Mastère Dév. Manager Full Stack",
+        rncp: "RNCP39765",
         school: "EFREI Paris",
+        location: "Villejuif, 94000",
         date: "Depuis 09/2025",
-        details: "RNCP 39765 - Expert en Architecture et Développement Logiciel",
-        stack: "Golang, Angular, Nest.js, Flutter, Rust, Micro Services, RabbitMQ/Kafka, GraphQL, AWS",
+        desc: [
+            "Data Warehouse, Data Lake, ETL, Hadoop, Spark, Power BI",
+            "Architecture Logicielle & Cloud, GraphQL, Microservices, RabbitMQ / Kafka, Golang"
+        ],
         type: "edu",
         icon: GraduationCap,
         color: "bg-zinc-900 dark:bg-white"
     },
     {
         title: "Bachelor Développeur Web & Applications",
+        rncp: "RNCP39608",
         school: "EFREI Paris",
-        date: "2024 - 2025",
-        details: "RNCP 39608 - Concepteur Développeur d'Application",
-        stack: "React.JS, Vue.js, Symfony, Spring Boot, iOS Swift, Docker, Stack ELK, OWASP Secure Coding, Figma, UML",
+        location: "Villejuif, 94000",
+        date: "09/2024 – 07/2025",
+        desc: [
+            "Pipelines CI/CD, intégration de bases NoSQL",
+            "Architecture MVC, POO, UX/UI, Java, React, Swift, Docker"
+        ],
         type: "edu",
         icon: GraduationCap,
         color: "bg-zinc-900 dark:bg-white"
     },
     {
         title: "BTS Services Informatiques aux Organisations",
-        school: "Lycée Jean Rostand Chantilly",
-        date: "2022 - 2024",
-        details: "Option SLAM (Solutions Logicielles et Applications Métiers)",
-        stack: "Java, PHP, SQL, HTML/CSS, JavaScript, Git",
+        school: "Lycée Jean Rostand",
+        location: "Chantilly, 60500",
+        date: "2022 – 2024",
+        desc: [
+            "Option SLAM (Solutions Logicielles et Applications Métiers)",
+            "Java, PHP, SQL, HTML/CSS, JavaScript, Git"
+        ],
         type: "edu",
         icon: GraduationCap,
         color: "bg-zinc-900 dark:bg-white"

@@ -12,25 +12,25 @@ function renderHighlightedText(text: string) {
 
     return parts.map((part, index) => {
         if (part === 'Angular') {
-            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-transparent text-red-600 dark:text-red-400 border border-red-500/30">Angular</span>;
+            return <span key={index} className="transition-colors duration-200 hover:text-red-600 dark:hover:text-red-400 cursor-default">Angular</span>;
         }
         if (part === 'ASP.NET') {
-            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-transparent text-purple-600 dark:text-purple-400 border border-purple-500/30">ASP.NET</span>;
+            return <span key={index} className="transition-colors duration-200 hover:text-purple-600 dark:hover:text-purple-400 cursor-default">ASP.NET</span>;
         }
         if (part === 'Azure DevOps') {
-            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-transparent text-blue-600 dark:text-blue-400 border border-blue-500/30">Azure DevOps</span>;
+            return <span key={index} className="transition-colors duration-200 hover:text-blue-600 dark:hover:text-blue-400 cursor-default">Azure DevOps</span>;
         }
         if (part === 'Laravel') {
-            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-transparent text-rose-600 dark:text-rose-400 border border-rose-500/30">Laravel</span>;
+            return <span key={index} className="transition-colors duration-200 hover:text-rose-600 dark:hover:text-rose-400 cursor-default">Laravel</span>;
         }
         if (part === 'SQL (MySQL)') {
-            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-transparent text-cyan-600 dark:text-cyan-400 border border-cyan-500/30">SQL (MySQL)</span>;
+            return <span key={index} className="transition-colors duration-200 hover:text-cyan-600 dark:hover:text-cyan-400 cursor-default">SQL (MySQL)</span>;
         }
         if (part === 'SharePoint') {
-            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-transparent text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">SharePoint</span>;
+            return <span key={index} className="transition-colors duration-200 hover:text-emerald-600 dark:hover:text-emerald-400 cursor-default">SharePoint</span>;
         }
         if (part === 'Relation client') {
-            return <span key={index} className="inline-flex items-center px-2 py-0.5 mx-0.5 rounded-md text-xs font-semibold bg-transparent text-amber-600 dark:text-amber-400 border border-amber-500/30">Relation client</span>;
+            return <span key={index} className="transition-colors duration-200 hover:text-amber-600 dark:hover:text-amber-400 cursor-default">Relation client</span>;
         }
         return part;
     });
@@ -161,19 +161,29 @@ export function Experience() {
                                         <edu.icon className="w-4 h-4" />
                                     )}
                                 </span>
-                                <h4 className="text-lg font-bold text-zinc-900 dark:text-white">{edu.title}</h4>
+                                <h4 className="text-lg font-bold text-zinc-900 dark:text-white flex items-center gap-1.5 flex-wrap">
+                                    <span>{edu.title}</span>
+                                    {edu.rncp && (
+                                        <>
+                                            <span className="text-zinc-400 dark:text-zinc-500 font-normal">|</span>
+                                            <span className="font-bold text-blue-600 dark:text-blue-400">{edu.rncp}</span>
+                                        </>
+                                    )}
+                                </h4>
                                 <div className="text-zinc-500 dark:text-zinc-400 font-medium mb-1">
-                                    {edu.school}
-                                </div>
-                                <div className="text-zinc-400 dark:text-zinc-500 text-xs italic mb-2">
-                                    {edu.details}
+                                    {edu.school} {edu.location && <>- <span className="text-xs">{edu.location}</span></>}
                                 </div>
                                 <span className="inline-block px-2 py-1 bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 text-xs rounded mb-3">
                                     {edu.date}
                                 </span>
-                                <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed">
-                                    <span className="font-semibold">Stack:</span> {edu.stack}
-                                </p>
+                                <ul className="space-y-2 text-zinc-600 dark:text-zinc-400 text-sm mt-2 border-l-2 border-zinc-200 dark:border-zinc-800 pl-3">
+                                    {edu.desc.map((d, j) => (
+                                        <li key={j} className="flex items-start gap-1.5">
+                                            <span className="text-zinc-400 font-bold select-none">•</span>
+                                            <span className="leading-relaxed">{d}</span>
+                                        </li>
+                                    ))}
+                                </ul>
                             </motion.div>
                         ))}
                     </div>

@@ -3,8 +3,8 @@ export type Language = 'fr' | 'ta' | 'en' | 'vi' | 'zh' | 'ar' | 'th';
 export const translations = {
     fr: {
         hero: {
-            title1: "Développeur",
-            title2: "Créatif.",
+            title1: "Pravin",
+            title2: "Wijayasuntharam",
             subtitle: "Je suis Pravin Wijayasuntharam, développeur passionné par l'intersection entre code et design. Je crée des expériences numériques immersives alliant design et ingénierie.",
             ctaGithub: "GitHub",
             ctaContact: "Me Contacter",
@@ -30,10 +30,14 @@ export const translations = {
             expDesc4a: "Préparation de commandes pour le service Drive",
             expDesc4b: "Hôte de caisse",
             expDesc4c: "Relation client",
-            eduTitle1: "Mastère Dev. Manager Fullstack",
-            eduDetails1: "RNCP 39765 - Expert en Architecture et Développement Logiciel",
+            eduTitle1: "Mastère Dév. Manager Full Stack",
+            eduDetails1: "RNCP39765",
+            eduDesc1a: "Data Warehouse, Data Lake, ETL, Hadoop, Spark, Power BI",
+            eduDesc1b: "Architecture Logicielle & Cloud, GraphQL, Microservices, RabbitMQ / Kafka, Golang",
             eduTitle2: "Bachelor Développeur Web & Applications",
-            eduDetails2: "RNCP 39608 - Concepteur Développeur d'Application",
+            eduDetails2: "RNCP39608",
+            eduDesc2a: "Pipelines CI/CD, intégration de bases NoSQL",
+            eduDesc2b: "Architecture MVC, POO, UX/UI, Java, React, Swift, Docker",
             dateSince: "Depuis",
         },
         projects: {
@@ -53,8 +57,8 @@ export const translations = {
     },
     en: {
         hero: {
-            title1: "Creative",
-            title2: "Developer.",
+            title1: "Pravin",
+            title2: "Wijayasuntharam",
             subtitle: "I create immersive digital experiences blending design and engineering. Passionate about performance, accessibility, and modern aesthetics.",
             ctaGithub: "GitHub",
             ctaContact: "Contact Me",
@@ -80,10 +84,14 @@ export const translations = {
             expDesc4a: "Order preparation for Drive service",
             expDesc4b: "Cashier",
             expDesc4c: "Customer relations",
-            eduTitle1: "Master Expert in Software Engineering",
-            eduDetails1: "Specialization in advanced software development, including technologies like Golang, Angular, Nest.js, Flutter, Rust, Micro Services, RabbitMQ/Kafka, GraphQL, AWS.",
-            eduTitle2: "Bachelor 3 - Software Engineering",
-            eduDetails2: "Intensive training in web and mobile development, focusing on React.JS, Vue.js, Symfony, Spring Boot, iOS Swift, Docker, ELK Stack, OWASP Secure Coding, Figma, UML.",
+            eduTitle1: "Master Dev. Manager Full Stack",
+            eduDetails1: "RNCP39765",
+            eduDesc1a: "Data Warehouse, Data Lake, ETL, Hadoop, Spark, Power BI",
+            eduDesc1b: "Software & Cloud Architecture, GraphQL, Microservices, RabbitMQ / Kafka, Golang",
+            eduTitle2: "Bachelor Web & Application Developer",
+            eduDetails2: "RNCP39608",
+            eduDesc2a: "CI/CD Pipelines, NoSQL database integration",
+            eduDesc2b: "MVC Architecture, OOP, UX/UI, Java, React, Swift, Docker",
             dateSince: "Since",
         },
         projects: {
@@ -103,8 +111,8 @@ export const translations = {
     },
     vi: {
         hero: {
-            title1: "Lập trình viên",
-            title2: "Sáng tạo.",
+            title1: "Pravin",
+            title2: "Wijayasuntharam",
             subtitle: "Tôi tạo ra những trải nghiệm kỹ thuật số sống động kết hợp giữa thiết kế và kỹ thuật. Đam mê hiệu suất, khả năng truy cập và thẩm mỹ hiện đại.",
             ctaGithub: "GitHub",
             ctaContact: "Liên hệ",
@@ -129,9 +137,9 @@ export const translations = {
             expDesc4a: "Chuẩn bị đơn hàng",
             expDesc4b: "Thu ngân",
             eduTitle1: "Thạc sĩ Chuyên gia Kỹ thuật Phần mềm",
-            eduDetails1: "Chuyên sâu về phát triển phần mềm nâng cao, bao gồm Golang, Angular, Nest.js, Flutter, Rust, Micro Services, RabbitMQ/Kafka, GraphQL, AWS.",
+            eduDetails1: "RNCP39765",
             eduTitle2: "Cử nhân 3 - Kỹ thuật Phần mềm",
-            eduDetails2: "Đào tạo chuyên sâu về phát triển web và di động, tập trung vào React.JS, Vue.js, Symfony, Spring Boot, iOS Swift, Docker, ELK Stack, OWASP Secure Coding, Figma, UML.",
+            eduDetails2: "RNCP39608",
             dateSince: "Từ",
         },
         projects: {
@@ -151,8 +159,8 @@ export const translations = {
     },
     ta: {
         hero: {
-            title1: "படைப்புத்திறன் மிக்க",
-            title2: "டெவலப்பர்.",
+            title1: "Pravin",
+            title2: "Wijayasuntharam",
             subtitle: "வடிவமைப்பையும் பொறியியலையும் இணைத்து அற்புதமான டிஜிட்டல் அனுபவங்களை உருவாக்குகிறேன். செயல்பாடு, அணுகல் மற்றும் நவீன அழகியலில் மிகுந்த ஆர்வம் கொண்டவன்.",
             ctaGithub: "GitHub",
             ctaContact: "தொடர்புக்கு",
@@ -177,9 +185,9 @@ export const translations = {
             expDesc4a: "ஆர்டர்களை தயார் செய்தல்",
             expDesc4b: "காசாளர்",
             eduTitle1: "மாஸ்டர் டெவ். மேனேஜர் ஃபுல்ஸ்டாக்",
-            eduDetails1: "RNCP 39765 - மென்பொருள் கட்டடக்கலை மற்றும் மேம்பாட்டு நிபுணர்",
+            eduDetails1: "RNCP39765",
             eduTitle2: "பேச்சிலர் வெப் & அப்ளிகேஷன் டெவலப்பர்",
-            eduDetails2: "RNCP 39608 - பயன்பாட்டு வடிவமைப்பாளர் மற்றும் டெவலப்பர்",
+            eduDetails2: "RNCP39608",
             dateSince: "முதல்",
         },
         projects: {
@@ -199,8 +207,8 @@ export const translations = {
     },
     zh: {
         hero: {
-            title1: "创意",
-            title2: "开发人员.",
+            title1: "Pravin",
+            title2: "Wijayasuntharam",
             subtitle: "我创造融合设计与工程的沉浸式数字体验。热衷于性能、无障碍访问和现代美学。",
             ctaGithub: "GitHub",
             ctaContact: "联系我",
@@ -225,9 +233,9 @@ export const translations = {
             expDesc4a: "订单准备",
             expDesc4b: "收银员",
             eduTitle1: "软件工程硕士专家",
-            eduDetails1: "RNCP 39765 - 软件架构与开发专家",
+            eduDetails1: "RNCP39765",
             eduTitle2: "Web 与应用开发学士",
-            eduDetails2: "RNCP 39608 - 应用程序设计与与开发",
+            eduDetails2: "RNCP39608",
             dateSince: "自",
         },
         projects: {
@@ -247,8 +255,8 @@ export const translations = {
     },
     ar: {
         hero: {
-            title1: "مطور",
-            title2: "مبدع.",
+            title1: "Pravin",
+            title2: "Wijayasuntharam",
             subtitle: "أقوم بإنشاء تجارب رقمية غامرة تجمع بين التصميم والهندسة. شغوف بالأداء وإمكانية الوصول والجماليات الحديثة.",
             ctaGithub: "GitHub",
             ctaContact: "اتصل بي",
@@ -273,9 +281,9 @@ export const translations = {
             expDesc4a: "تحضير الطلبات",
             expDesc4b: "أمين صندوق",
             eduTitle1: "ماجستير خبير في هندسة البرمجيات",
-            eduDetails1: "تخصص في تطوير البرمجيات المتقدمة",
+            eduDetails1: "RNCP39765",
             eduTitle2: "بكالوريوس في تطوير الويب والتطبيقات",
-            eduDetails2: "تدريب مكثف في تطوير الويب والهاتف المحمول",
+            eduDetails2: "RNCP39608",
             dateSince: "منذ",
         },
         projects: {
@@ -295,8 +303,8 @@ export const translations = {
     },
     th: {
         hero: {
-            title1: "นักพัฒนา",
-            title2: "สร้างสรรค์.",
+            title1: "Pravin",
+            title2: "Wijayasuntharam",
             subtitle: "ฉันสร้างประสบการณ์ดิจิทัลที่น่าประทับใจโดยผสมผสานการออกแบบและวิศวกรรมเข้าด้วยกัน หลงใหลในประสิทธิภาพ การเข้าถึง และความสวยงามที่ทันสมัย",
             ctaGithub: "GitHub",
             ctaContact: "ติดต่อฉัน",
@@ -321,9 +329,9 @@ export const translations = {
             expDesc4a: "การเตรียมคำสั่งซื้อ",
             expDesc4b: "แคชเชียร์",
             eduTitle1: "ปริญญาโท ผู้เชี่ยวชาญด้านวิศวกรรมซอฟต์แวร์",
-            eduDetails1: "ความเชี่ยวชาญในการพัฒนาซอฟต์แวร์ขั้นสูง",
+            eduDetails1: "RNCP39765",
             eduTitle2: "ปริญญาตรี การพัฒนาเว็บและแอปพลิเคชัน",
-            eduDetails2: "การฝึกอบรมเข้มข้นในการพัฒนาเว็บและมือถือ",
+            eduDetails2: "RNCP39608",
             dateSince: "ตั้งแต่",
         },
         projects: {

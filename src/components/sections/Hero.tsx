@@ -20,7 +20,7 @@ export function Hero() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="space-y-6 max-w-4xl relative z-10"
             >
-                <h1 className="text-4xl md:text-8xl font-bold tracking-tight text-zinc-900 dark:text-white/90 transition-colors">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-zinc-900 dark:text-white/90 transition-colors">
                     {t('hero.title1')} <br className="hidden md:block" /> {t('hero.title2')}
                 </h1>
                 <p className="text-xl md:text-2xl text-zinc-600 dark:text-white/60 max-w-2xl leading-relaxed transition-colors">
