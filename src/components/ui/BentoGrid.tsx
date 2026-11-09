@@ -350,7 +350,7 @@ export function BentoGrid() {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="LinkedIn"
-                            className="w-full h-full bg-[#0A66C2] rounded-3xl p-4 md:p-6 flex items-center justify-center transition-all duration-300 hover:scale-[1.03] hover:-translate-y-0.5 active:scale-[0.98] hover:shadow-lg cursor-pointer text-white"
+                            className="w-full h-full bg-[#0A66C2]/10 dark:bg-[#0A66C2]/15 border border-[#0A66C2]/20 dark:border-[#0A66C2]/30 rounded-3xl p-4 md:p-6 flex items-center justify-center transition-all duration-300 hover:bg-[#0A66C2] dark:hover:bg-[#0A66C2] hover:border-[#0A66C2] hover:scale-[1.03] hover:-translate-y-0.5 active:scale-[0.98] hover:shadow-md cursor-pointer text-[#0A66C2] dark:text-[#389cf7] hover:text-white dark:hover:text-white"
                         >
                             <FaLinkedinIn className="w-9 h-9 md:w-11 md:h-11" />
                         </a>
@@ -362,7 +362,7 @@ export function BentoGrid() {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="YouTube"
-                            className="w-full h-full bg-[#FF0000] rounded-3xl p-4 md:p-6 flex items-center justify-center transition-all duration-300 hover:scale-[1.03] hover:-translate-y-0.5 active:scale-[0.98] hover:shadow-lg cursor-pointer text-white"
+                            className="w-full h-full bg-[#FF0000]/10 dark:bg-[#FF0000]/15 border border-[#FF0000]/20 dark:border-[#FF0000]/30 rounded-3xl p-4 md:p-6 flex items-center justify-center transition-all duration-300 hover:bg-[#FF0000] dark:hover:bg-[#FF0000] hover:border-[#FF0000] hover:scale-[1.03] hover:-translate-y-0.5 active:scale-[0.98] hover:shadow-md cursor-pointer text-[#FF0000] dark:text-[#ff4d4d] hover:text-white dark:hover:text-white"
                         >
                             <FaPlay className="w-8 h-8 md:w-10 md:h-10 translate-x-0.5" />
                         </a>
