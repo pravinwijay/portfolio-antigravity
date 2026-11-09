@@ -52,7 +52,7 @@ export function Hero() {
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="h-[52px] w-[52px] flex items-center justify-center border border-zinc-200 dark:border-white/20 rounded-lg text-zinc-900 dark:text-white hover:bg-zinc-100 dark:hover:bg-white/10 transition-colors shrink-0"
+                            className="h-[52px] w-[52px] flex items-center justify-center border border-zinc-200 dark:border-white/20 rounded-lg text-zinc-900 dark:text-white hover:bg-[#5865F2] dark:hover:bg-[#5865F2] hover:border-[#5865F2] dark:hover:border-[#5865F2] hover:text-white dark:hover:text-white transition-colors shrink-0"
                             title="Discord: praviin93"
                         >
                             <SiDiscord className="w-6 h-6" />
