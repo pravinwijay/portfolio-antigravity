@@ -38,7 +38,7 @@ function renderHighlightedText(text: string) {
 
 export function Experience() {
     const EduIcon = EDUCATION[0].icon
-    const [openExp, setOpenExp] = useState<Record<number, boolean>>({ 0: true, 1: true, 2: true, 3: true });
+    const [openExp, setOpenExp] = useState<Record<number, boolean>>({});
 
     const toggleExp = (index: number) => {
         setOpenExp(prev => ({ ...prev, [index]: !prev[index] }));

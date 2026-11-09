@@ -91,8 +91,8 @@ const listItem = {
 
 export function BentoGrid() {
     const { t } = useLanguage();
-    const [openExp, setOpenExp] = useState<Record<number, boolean>>({ 0: true, 1: true, 2: true, 3: true });
-    const [openEdu, setOpenEdu] = useState<Record<number, boolean>>({ 0: true, 1: true, 2: true });
+    const [openExp, setOpenExp] = useState<Record<number, boolean>>({});
+    const [openEdu, setOpenEdu] = useState<Record<number, boolean>>({});
     const [activeStackTab, setActiveStackTab] = useState<'data' | 'dev'>('data');
 
     const toggleExp = (index: number) => {
