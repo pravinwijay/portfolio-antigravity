@@ -50,6 +50,8 @@ export const translations = {
         },
         tools: {
             title: "Et en dehors du dev...",
+            offlineTitle: "et en dehors de mon ordi",
+            reading: "Lecture",
         },
         footer: {
             text: "Conçu avec Next.js & Framer Motion.",
@@ -104,6 +106,8 @@ export const translations = {
         },
         tools: {
             title: "Tools & Software",
+            offlineTitle: "and away from my computer",
+            reading: "Reading",
         },
         footer: {
             text: "Designed with Next.js & Framer Motion.",
@@ -152,6 +156,8 @@ export const translations = {
         },
         tools: {
             title: "Công cụ & Phần mềm",
+            offlineTitle: "và cả khi rời máy tính",
+            reading: "Đọc sách",
         },
         footer: {
             text: "Được thiết kế với Next.js & Framer Motion.",
@@ -200,6 +206,8 @@ export const translations = {
         },
         tools: {
             title: "மென்பொருள் கருவிகள்",
+            offlineTitle: "கணினிக்கு வெளியே",
+            reading: "வாசிப்பு",
         },
         footer: {
             text: "Next.js & Framer Motion மூலம் வடிவமைக்கப்பட்டது.",
@@ -248,6 +256,8 @@ export const translations = {
         },
         tools: {
             title: "工具与软件",
+            offlineTitle: "以及电脑之外",
+            reading: "阅读",
         },
         footer: {
             text: "使用 Next.js & Framer Motion 设计。",
@@ -296,6 +306,8 @@ export const translations = {
         },
         tools: {
             title: "أدوات وبرامج",
+            offlineTitle: "وبعيداً عن الكمبيوتر",
+            reading: "القراءة",
         },
         footer: {
             text: "صمم باستخدام Next.js & Framer Motion.",
@@ -344,6 +356,8 @@ export const translations = {
         },
         tools: {
             title: "เครื่องมือ & ซอฟต์แวร์",
+            offlineTitle: "และนอกเหนือจากคอมพิวเตอร์",
+            reading: "การอ่าน",
         },
         footer: {
             text: "ออกแบบด้วย Next.js & Framer Motion.",
