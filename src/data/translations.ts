@@ -49,7 +49,7 @@ export const translations = {
             notDeployedBtn: "J'ai compris",
         },
         tools: {
-            title: "Et en dehors du dev...",
+            title: "En dehors du dev...",
             offlineTitle: "et en dehors de mon ordi",
             reading: "Lecture",
         },
