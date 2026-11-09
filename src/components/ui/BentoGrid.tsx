@@ -230,6 +230,7 @@ export function BentoGrid() {
                 "Architecture Logicielle & Cloud, GraphQL, Microservices, RabbitMQ / Kafka, Golang"
             ],
             icon: GraduationCap,
+            logo: { light: "/images/projects/efrei-pantheon-blue.png", dark: "/images/projects/efrei-pantheon-white.png" } as { light: string; dark: string } | undefined,
             color: "bg-zinc-900 dark:bg-white"
         },
         {
@@ -243,6 +244,7 @@ export function BentoGrid() {
                 "Architecture MVC, POO, UX/UI, Java, React, Swift, Docker"
             ],
             icon: GraduationCap,
+            logo: { light: "/images/projects/efrei-pantheon-blue.png", dark: "/images/projects/efrei-pantheon-white.png" } as { light: string; dark: string } | undefined,
             color: "bg-zinc-900 dark:bg-white"
         },
         {
@@ -384,7 +386,7 @@ export function BentoGrid() {
                     >
                         {experiences.map((exp, i) => (
                             <motion.div variants={listItem} key={i} className="relative">
-                                <span className={`absolute -left-[35px] md:-left-[41px] top-1 ${exp.company === 'MAF Assurances' ? 'p-0.5' : 'p-1.5 md:p-2'} rounded-full border-4 border-white dark:border-zinc-900 ${exp.color} text-white z-10 w-7 h-7 md:w-9 md:h-9 flex items-center justify-center overflow-hidden`}>
+                                <span className={`absolute -left-[39px] md:-left-[51px] top-1 ${exp.company === 'MAF Assurances' ? 'p-0.5' : 'p-1.5 md:p-2'} rounded-full border-4 border-white dark:border-zinc-900 ${exp.color} text-white z-10 w-7 h-7 md:w-9 md:h-9 flex items-center justify-center overflow-hidden`}>
                                     {typeof exp.icon === 'string' ? (
                                         <img
                                             src={getImagePath(exp.icon)}
@@ -467,8 +469,15 @@ export function BentoGrid() {
                     >
                         {education.map((edu, i) => (
                             <motion.div variants={listItem} key={i} className="relative">
-                                <span className={`absolute -left-[35px] md:-left-[41px] top-1 p-1.5 md:p-2 rounded-full border-4 border-white dark:border-zinc-900 bg-zinc-900 dark:bg-white text-white dark:text-black z-10 w-7 h-7 md:w-9 md:h-9 flex items-center justify-center`}>
-                                    <edu.icon className="w-3 h-3 md:w-4 md:h-4" />
+                                <span className={`absolute -left-[39px] md:-left-[51px] top-1 rounded-full border-4 ${edu.logo ? 'border-zinc-200 dark:border-zinc-800' : 'border-white dark:border-zinc-900'} z-10 w-7 h-7 md:w-9 md:h-9 flex items-center justify-center overflow-hidden ${edu.logo ? 'p-0.5 bg-white dark:bg-black' : 'p-1.5 md:p-2 bg-zinc-900 dark:bg-white text-white dark:text-black'}`}>
+                                    {edu.logo ? (
+                                        <>
+                                            <img src={getImagePath(edu.logo.light)} alt={edu.school} className="w-full h-full object-contain dark:hidden" />
+                                            <img src={getImagePath(edu.logo.dark)} alt={edu.school} className="w-full h-full object-contain hidden dark:block" />
+                                        </>
+                                    ) : (
+                                        <edu.icon className="w-3 h-3 md:w-4 md:h-4" />
+                                    )}
                                 </span>
                                 <div
                                     onClick={() => toggleEdu(i)}
